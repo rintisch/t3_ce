@@ -12,7 +12,7 @@ defined('TYPO3_MODE') || die();
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates']['t3ce'] = 'EXT:t3_ce/Configuration/TypoScript/ContentElement/';
 
 /***************
- * Register Icons
+ * Register Icons: Extension and content elements
  */
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 $iconRegistry->registerIcon(
@@ -20,6 +20,7 @@ $iconRegistry->registerIcon(
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
     ['source' => 'EXT:t3_ce/Resources/Public/Icons/extension.svg']
 );
+
 /* Add more icons for other content elementes */
 $icons = [
     'accordion',

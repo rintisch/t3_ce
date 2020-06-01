@@ -1,10 +1,26 @@
-######################
-#### DEPENDENCIES ####
-######################
-@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+lib.contentElement {
+    templateRootPaths.1570440243 = EXT:icon_content/Resources/Private/Templates/
+    partialRootPaths.1570440243 = EXT:icon_content/Resources/Private/Partials/
+}
+lib.contentElement {
+    layoutRootPaths {
+        1570440243  = EXT:t3_ce/Resources/Private/Layouts/
+    }
+
+    partialRootPaths {
+        1570440243  = EXT:t3_ce/Resources/Private/Partials/
+    }
+
+    templateRootPaths {
+        1570440243  = EXT:t3_ce/Resources/Private/Templates/
+    }
+}
+
 
 #############################################################
 #### CONTENT ELEMENT RENDERING                           ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
 @import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript'
+
+

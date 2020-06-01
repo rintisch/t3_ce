@@ -7,7 +7,7 @@
         </header>
         <body>
             <trans-unit id="content_element.accordion">
-                <source>Awesome Accordion</source>
+                <source>Accordion</source>
             </trans-unit>
             <trans-unit id="content_element.accordion.description">
                 <source>An inline relation record element for fancy accordion magic</source>

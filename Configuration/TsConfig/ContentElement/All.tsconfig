@@ -1,0 +1,4 @@
+##########################
+#### CONTENT ELEMENTS ####
+##########################
+@import 'EXT:t3_ce/Configuration/TsConfig/ContentElement/Element/*.tsconfig'

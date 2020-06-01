@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-06-01UTC10:07:040">
+        <header>
+            <authorName>Gerald Rintisch</authorName>
+            <authorEmail>gerald.rintisch@posteo.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="content_element.accordion">
+                <source>Awesome Accordion</source>
+            </trans-unit>
+            <trans-unit id="content_element.accordion.description">
+                <source>An inline relation record element for fancy accordion magic</source>
+            </trans-unit>
+            <trans-unit id="accordion_item">
+                <source>Accordion items</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.header">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.teaser">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.bodytext">
+                <source>Bodytext</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.media">
+                <source>Images</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,10 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+#############################################################
+#### CONTENT ELEMENT RENDERING                           ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript'

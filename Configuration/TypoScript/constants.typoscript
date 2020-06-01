@@ -1,0 +1,15 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+plugin.t3_ce_contentelements {
+    templates {
+        layoutRootPath = EXT:t3_ce/Resources/Private/Layouts/
+        partialRootPath = EXT:t3_ce/Resources/Private/Partials/
+        templateRootPath = EXT:t3_ce/Resources/Private/Templates/
+    }
+}

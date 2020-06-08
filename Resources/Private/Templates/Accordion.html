@@ -7,13 +7,13 @@
         <div class="shadow-md">
             <f:for each="{records}" as="record" iteration="iteration">
                 <div class="tab w-full overflow-hidden border-t">
-                    <input class="absolute opacity-0" id="tab-single-{record.data.uid}" type="radio" name="tabs2">
+                    <input class="absolute opacity-0" id="tab-single-{record.data.uid}" type="checkbox" name="tabs2">
                     <label class="block p-5 leading-normal cursor-pointer" for="tab-single-{record.data.uid}">{record.data.header}</label>
-                    <div class="tab-content overflow-hidden border-l-2 bg-gray-100 border-pink-500 leading-normal">
+                    <div class="tab-content overflow-hidden border-l-2 bg-gray-100 border-primary-500 leading-normal">
                         <f:if condition="{record.files}">
                             <f:for each="{record.files}" as="filesItem" iteration="iteration">
                                 <figure class="mb-8 mt-4">
-                                    <f:image class="rounded-full mx-6 border-2 border-pink-500 shadow-lg" image="{filesItem}" width="100" height="100c"/>
+                                    <f:image class="rounded-full mx-6 border-2 border-primary-500 shadow-lg" image="{filesItem}" width="100" height="100c"/>
                                     <f:if condition="{filesItem.description}">
                                         <figcaption>
                                             {filesItem.description}
@@ -21,11 +21,6 @@
                                     </f:if>
                                 </figure>
                             </f:for>
-                        </f:if>
-                        <f:if condition="{record.data.teaser}">
-                            <div class="text-blue-1000 m-6 font-semibold">
-                                <f:format.html>{record.data.teaser}</f:format.html>
-                            </div>
                         </f:if>
                         <f:if condition="{record.data.bodytext}">
                             <div class="m-6">

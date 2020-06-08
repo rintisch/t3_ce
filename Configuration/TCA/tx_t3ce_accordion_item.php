@@ -51,7 +51,6 @@ return [
             'showitem' => '
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                 header,
-                teaser,
                 bodytext,
                 media,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
@@ -196,19 +195,6 @@ return [
                 'type' => 'input',
                 'size' => 50,
                 'eval' => 'trim'
-            ],
-        ],
-        'teaser' => [
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:accordion_item.teaser',
-            'l10n_mode' => 'prefixLangTitle',
-            'l10n_cat' => 'text',
-            'config' => [
-                'type' => 'text',
-                'cols' => '40',
-                'rows' => '5',
-                'softref' => 'typolink_tag,images,email[subst],url',
-                'enableRichtext' => false,
-                'richtextConfiguration' => 'default'
             ],
         ],
         'bodytext' => [

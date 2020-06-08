@@ -12,7 +12,6 @@ CREATE TABLE tx_t3ce_accordion_item
 (
     tt_content int(11) unsigned DEFAULT '0',
     header     varchar(255)     DEFAULT '' NOT NULL,
-    teaser     text,
     media      int(11) unsigned DEFAULT '0',
     bodytext   text,
 );

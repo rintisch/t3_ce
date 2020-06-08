@@ -5,6 +5,10 @@
 }
 /* :checked - resize to full height */
 .tab  {
+  input + label {
+    @apply border-l-2;
+    @apply border-transparent;
+  }
   input:checked ~ .tab-content {
    @apply max-h-screen;
   }
@@ -13,7 +17,7 @@
     @apply p-5;
     @apply border-l-2;
     @apply border-primary-500;
-    @apply bg-gray-100;
+    @apply bg-gray-300;
     @apply text-primary-700;
   }
   /* Icon */
@@ -24,8 +28,8 @@
     @apply block;
     @apply w-8;
     @apply h-8;
-    line-height: 2.3rem;
-    @apply text-xl;
+    line-height: 1.8rem;
+    font-size: 2.2rem;
     @apply text-center;
     @apply duration-75;
   }

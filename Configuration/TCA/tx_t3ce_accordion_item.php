@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the package bk2k/bootstrap-package.
+ * This file was part of the package bk2k/bootstrap-package and is adapted here.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.

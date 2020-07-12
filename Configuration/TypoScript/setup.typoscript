@@ -22,5 +22,8 @@ lib.contentElement {
 #### Manual inclusion to keep control over loading order ####
 #############################################################
 @import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript'
+@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Carousel.typoscript'
+@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselFullscreen.typoscript'
+@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselSmall.typoscript'
 
 

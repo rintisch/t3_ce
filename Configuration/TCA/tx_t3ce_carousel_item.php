@@ -53,14 +53,9 @@ return [
             hidden,
             tt_content,
             header,
-            header_layout,
-            header_class,
             subheader,
-            subheader_layout,
-            subheader_class
             bodytext,
             image,
-            text_color,
             background_color,
             background_image
         ',
@@ -82,7 +77,6 @@ return [
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                 --palette--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header;header,
                 nav_title,
-                text_color,
                 link,
                 --div--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:tabs.background,
                 background_color,
@@ -100,7 +94,6 @@ return [
                 --palette--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header;header,
                 nav_title,
                 bodytext,
-                text_color,
                 --div--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:tabs.background,
                 background_color,
                 background_image,
@@ -152,7 +145,6 @@ return [
                 --palette--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header;header,
                 nav_title,
                 bodytext,
-                text_color,
                 image,
                 link,
                 --div--;LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:tabs.background,
@@ -217,12 +209,8 @@ return [
         'header' => [
             'showitem' => '
                 header,
-                header_layout,
-                header_class,
                 --linebreak--,
                 subheader,
-                subheader_layout,
-                subheader_class,
                 --linebreak--,
                 header_position,
             '
@@ -416,34 +404,6 @@ return [
                 'eval' => 'trim,required'
             ],
         ],
-        'header_layout' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header_layout',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'H1',
-                        '1'
-                    ],
-                    [
-                        'H2',
-                        '2'
-                    ],
-                    [
-                        'H3',
-                        '3'
-                    ],
-                    [
-                        'H4',
-                        '4'
-                    ],
-                ],
-                'default' => '1'
-            ],
-            'l10n_mode' => 'exclude',
-        ],
         'header_position' => [
             'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header_position',
             'exclude' => true,
@@ -471,23 +431,6 @@ return [
                 'default' => ''
             ]
         ],
-        'header_class' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.header_class',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['', 'none'],
-                    ['h1', 'h1'],
-                    ['h2', 'h2'],
-                    ['h3', 'h3'],
-                    ['h4', 'h4'],
-                    ['h5', 'h5']
-                ]
-            ],
-            'l10n_mode' => 'exclude',
-        ],
         'subheader' => [
             'exclude' => true,
             'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.subheader',
@@ -496,47 +439,6 @@ return [
                 'size' => 50,
                 'eval' => 'trim'
             ],
-        ],
-        'subheader_layout' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.subheader_layout',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'H2',
-                        '2'
-                    ],
-                    [
-                        'H3',
-                        '3'
-                    ],
-                    [
-                        'H4',
-                        '4'
-                    ],
-                ],
-                'default' => '2'
-            ],
-            'l10n_mode' => 'exclude',
-        ],
-        'subheader_class' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.subheader_class',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['', 'none'],
-                    ['h1', 'h1'],
-                    ['h2', 'h2'],
-                    ['h3', 'h3'],
-                    ['h4', 'h4'],
-                    ['h5', 'h5']
-                ]
-            ],
-            'l10n_mode' => 'exclude',
         ],
         'nav_title' => [
             'exclude' => true,
@@ -619,16 +521,6 @@ return [
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
-        ],
-        'text_color' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.text_color',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'colorpicker',
-                'default' => '#FFFFFF',
-            ],
-            'l10n_mode' => 'exclude',
         ],
         'background_color' => [
             'exclude' => true,

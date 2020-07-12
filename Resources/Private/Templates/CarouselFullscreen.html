@@ -1,7 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Main">
-<f:debug>{_all}</f:debug>
     <f:if condition="{records}">
         <div id="carousel-{data.uid}" class="carousel carousel-fullscreen carousel-{data.pi_flexform.transition} slide" {f:if(condition: data.pi_flexform.interval, then: 'data-interval="{data.pi_flexform.interval}" ')}data-wrap="{f:if(condition:data.pi_flexform.wrap,then:'true',else:'false')}" data-ride="carousel">
             <div class="carousel-inner">

@@ -12,6 +12,11 @@ lib.contentElement {
     }
 }
 
+################
+#### HELPER ####
+################
+@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript'
+
 #############################################################
 #### CONTENT ELEMENT RENDERING                           ####
 #### Manual inclusion to keep control over loading order ####

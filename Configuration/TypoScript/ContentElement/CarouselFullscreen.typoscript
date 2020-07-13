@@ -25,6 +25,7 @@ tt_content.carousel_fullscreen {
                 intval = 1
                 wrap = tt_content=|
             }
+
             orderBy = sorting
             dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -32,11 +33,13 @@ tt_content.carousel_fullscreen {
                     references.fieldName = background_image
                     as = backgroundImage
                 }
+
                 20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                 20 {
                     references.fieldName = image
                     as = images
                 }
+
                 1532633187 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
                 1532633187 {
                     fieldName = background_image_options

@@ -5,7 +5,7 @@
     <f:variable name="backgroundImageClasses">carousel-backgroundimage</f:variable>
     <f:if condition="{item.data.background_image_options.parallax}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-parallax</f:variable></f:if>
     <f:if condition="{item.data.background_image_options.fade}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-fade</f:variable></f:if>
-    <f:if condition="{item.data.background_image_options.filter}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-{item.data.background_image_options.filter}</f:variable></f:if>
+    <f:if condition="{item.data.background_image_options.filter}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-{item.data.background_image_options.filter}</f:variable></f:if><f:debug>{_all}</f:debug>
     <div class="carousel-backgroundimage-container">
         <div id="{backgroundImageIdentifier}" class="{backgroundImageClasses}">
             <f:if condition="{backgroundImageObject}">

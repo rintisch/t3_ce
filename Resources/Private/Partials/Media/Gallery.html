@@ -1,0 +1,45 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+
+    <f:variable name="imagecols">1</f:variable>
+    <f:if condition="{files -> f:count()} > 1">
+        <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
+    </f:if>
+    <f:variable name="columnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
+    <rintisch:data.imageVariants
+        as="variants"
+        variants="{variants}"
+        multiplier="{columnConfig.multiplier}"
+        gutters="{columnConfig.gutters}"
+        corrections="{columnConfig.corrections}"/>
+
+    <div
+        class="w-full sm:w-1/2 md:w-3/5 lg:w-2/3  relative rounded overflow-hidden"
+        data-ce-columns="{gallery.count.columns}"
+        data-ce-images="{gallery.count.files}">
+        <f:if condition="{gallery.position.horizontal} == 'center'">
+            <f:then>
+                <div class="ce-outer">
+                    <div class="ce-inner">
+                        <f:render section="gallery" arguments="{_all}"/>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <f:render section="gallery" arguments="{_all}"/>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="gallery">
+    <f:for each="{files}" as="file">
+        <div class="gallery-item {columnConfig.class}">
+            <f:render partial="Media/Type/Image" arguments="{file: file, data: data, settings: settings, variants: variants}"/>
+        </div>
+    </f:for>
+</f:section>
+</html>

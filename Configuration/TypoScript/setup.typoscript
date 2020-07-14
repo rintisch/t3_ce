@@ -1,14 +1,15 @@
 lib.contentElement {
+
     layoutRootPaths {
-        1570440243 = EXT:t3_ce/Resources/Private/Layouts/
+        20 = EXT:t3_ce/Resources/Private/Layouts/
     }
 
     partialRootPaths {
-        1570440243 = EXT:t3_ce/Resources/Private/Partials/
+        20 = EXT:t3_ce/Resources/Private/Partials/
     }
 
     templateRootPaths {
-        1570440243 = EXT:t3_ce/Resources/Private/Templates/
+        20 = EXT:t3_ce/Resources/Private/Templates/
     }
 }
 

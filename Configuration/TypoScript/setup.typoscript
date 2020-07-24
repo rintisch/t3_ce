@@ -16,16 +16,16 @@ lib.contentElement {
 ################
 #### HELPER ####
 ################
-@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript'
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript">
 
 #############################################################
 #### CONTENT ELEMENT RENDERING                           ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript'
-@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/Carousel.typoscript'
-@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselFullscreen.typoscript'
-@import 'EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselSmall.typoscript'
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Carousel.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselFullscreen.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselSmall.typoscript">
 
 
 

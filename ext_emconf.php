@@ -12,6 +12,7 @@ $EM_CONF[$_EXTKEY] = [
             'typo3' => '9.5.0-10.4.99',
             'fluid_styled_content' => '9.5.0-10.4.99',
             'rte_ckeditor' => '9.5.0-10.4.99',
+            'container' => '1.1.1 - 1.99'
         ],
         'conflicts' => [
         ],

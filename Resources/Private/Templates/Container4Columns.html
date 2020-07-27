@@ -1,0 +1,22 @@
+<div class="grid with-gutters small justify-space-between">
+    <div class="width-1of4">
+        <f:for each="{children1of4}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+    </div>
+    <div class="width-1of4">
+        <f:for each="{children2of4}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+    </div>
+    <div class="width-1of4">
+        <f:for each="{children3of4}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+    </div>
+    <div class="width-1of4">
+        <f:for each="{children4of4}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+    </div>
+</div>

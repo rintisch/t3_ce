@@ -22,10 +22,7 @@ lib.contentElement {
 #### CONTENT ELEMENT RENDERING                           ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Accordion.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Carousel.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselFullscreen.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/CarouselSmall.typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3_ce/Configuration/TypoScript/ContentElement" extensions="typoscript">
 
 
 

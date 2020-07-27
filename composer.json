@@ -1,19 +1,24 @@
 {
-    "name": "rintisch/t3-ce",
-    "type": "typo3-cms-extension",
-    "version": "1.0.0",
-    "description": "Often needed content elements which are not included in Fluid Styled Content.",
-    "homepage": "https://github.com/rintisch",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
-    "require": {
-        "typo3/cms-core": "^9.5 || ^10.2",
-        "typo3/cms-rte-ckeditor": "^9.5 || ^10.2",
-        "typo3/cms-fluid-styled-content": "^9.5 || ^10.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Rintisch\\T3Ce\\": "Classes/"
-        }
+  "name": "rintisch/t3-ce",
+  "type": "typo3-cms-extension",
+  "version": "1.0.0",
+  "description": "Often needed content elements which are not included in Fluid Styled Content.",
+  "homepage": "https://github.com/rintisch",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS"
+  ],
+  "require": {
+    "typo3/cms-core": "^9.5 || ^10.2",
+    "typo3/cms-rte-ckeditor": "^9.5 || ^10.2",
+    "typo3/cms-fluid-styled-content": "^9.5 || ^10.2",
+    "b13/container": "^1.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rintisch\\T3Ce\\": "Classes/"
     }
+  }
 }

@@ -24,7 +24,6 @@ $iconRegistry->registerIcon(
 /* Add more icons for other content elementes */
 $icons = [
     'accordion',
-    'accordion-item',
     'carousel',
     'carousel-item',
     'carousel-item-backgroundimage',
@@ -33,7 +32,8 @@ $icons = [
     'carousel-item-html',
     'carousel-item-image',
     'carousel-item-text',
-    'carousel-item-textandimage'
+    'carousel-item-textandimage',
+    'page-hero'
 ];
 foreach ($icons as $icon) {
     $iconRegistry->registerIcon(

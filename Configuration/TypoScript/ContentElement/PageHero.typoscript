@@ -1,0 +1,43 @@
+###############################
+#### CTYPE: T3CE PAGE HERO ####
+###############################
+
+tt_content.page_hero =< lib.contentElement
+tt_content.page_hero {
+    templateName = PageHero
+
+    templateRootPaths.0 = EXT:t3_ce/Resources/Private/Templates
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = background_image
+            as = backgroundImage
+        }
+
+        20 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
+        20 {
+            fieldName = background_image_options
+            as = backgroundImageOptions
+        }
+    }
+}
+
+
+#########################
+### RESPONSIVE IMAGES ###
+#########################
+lib.contentElement.settings.responsiveimages.contentelements {
+    page_hero {
+        multiplier {
+            default = 2
+            large = 1
+            medium = 1
+            small = 1
+        }
+    }
+}
+

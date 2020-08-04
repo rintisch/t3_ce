@@ -18,10 +18,9 @@ lib.contentElement {
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript">
 
-#############################################################
-#### CONTENT ELEMENT RENDERING                           ####
-#### Manual inclusion to keep control over loading order ####
-#############################################################
+###################################
+#### CONTENT ELEMENT RENDERING ####
+###################################
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3_ce/Configuration/TypoScript/ContentElement" extensions="typoscript">
 
 

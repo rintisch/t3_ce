@@ -14,3 +14,4 @@
     ],
     'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-4col.svg'
 );
+

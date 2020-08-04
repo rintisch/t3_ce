@@ -1,0 +1,16 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+mod.wizards.newContentElement.wizardItems.interactive {
+    elements {
+        page_hero {
+            iconIdentifier = content-t3ce-page-hero
+            title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.page_hero
+            description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.page_hero.description
+            tt_content_defValues {
+                CType = page_hero
+            }
+        }
+    }
+    show := addToList(page_hero)
+}

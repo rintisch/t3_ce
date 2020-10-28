@@ -58,10 +58,10 @@ lib.contentElement.settings.responsiveimages.contentelements {
     carousel_fullscreen {
         text_and_image {
             multiplier {
-                default = 0.5
-                large = 0.5
-                medium = 0.5
-                small = 0.5
+                default = 1.5
+                large = 1.2
+                medium = 1.2
+                small = 1.2
             }
         }
     }

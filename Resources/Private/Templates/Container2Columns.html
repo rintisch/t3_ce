@@ -4,7 +4,7 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
-    <div class="grid with-gutters small justify-space-between">
+    <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="width-1of2">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}

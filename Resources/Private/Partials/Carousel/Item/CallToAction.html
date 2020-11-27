@@ -4,9 +4,13 @@
             <f:if condition="{item.data.nav_title}">
                 <div>{item.data.nav_title}</div>
             </f:if>
-            <h2 class="carousel-item-header{f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}"><f:format.htmlentitiesDecode>{item.data.header}</f:format.htmlentitiesDecode></h2>
+            <h2 class="carousel-item-header{f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}">
+                <f:format.htmlentitiesDecode>{item.data.header}</f:format.htmlentitiesDecode>
+            </h2>
             <f:if condition="{item.data.subheader}">
-                <p class="carousel-item-subheader{f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}"><f:format.htmlentitiesDecode>{item.data.subheader}</f:format.htmlentitiesDecode></p>
+                <p class="carousel-item-subheader{f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}">
+                    <f:format.htmlentitiesDecode>{item.data.subheader}</f:format.htmlentitiesDecode>
+                </p>
             </f:if>
             <f:if condition="{item.data.bodytext}">
                 <div class="carousel-item-bodytext">
@@ -20,7 +24,7 @@
                             <span>{item.data.button_text}</span>
                         </f:then>
                         <f:else>
-                            <span><f:translate key="readmore" extensionName="bootstrap_package" /></span>
+                            <span><f:translate key="readmore" extensionName="bootstrap_package"/></span>
                         </f:else>
                     </f:if>
                 </f:link.typolink>

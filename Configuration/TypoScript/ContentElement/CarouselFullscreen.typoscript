@@ -6,47 +6,47 @@ tt_content.carousel_fullscreen >
 tt_content.carousel_fullscreen =< lib.contentElement
 tt_content.carousel_fullscreen {
 
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = CarouselFullscreen
+  ################
+  ### TEMPLATE ###
+  ################
+  templateName = CarouselFullscreen
 
-    ##########################
-    ### DATA PREPROCESSING ###
-    ##########################
-    dataProcessing {
-        10 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
-        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-        20 {
-            table = tx_t3ce_carousel_item
-            pidInList.field = pid
-            where {
-                data = field:uid
-                intval = 1
-                wrap = tt_content=|
-            }
+  ##########################
+  ### DATA PREPROCESSING ###
+  ##########################
+  dataProcessing {
+    10 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
+    20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    20 {
+      table = tx_t3ce_carousel_item
+      pidInList.field = pid
+      where {
+        data = field:uid
+        intval = 1
+        wrap = tt_content=|
+      }
 
-            orderBy = sorting
-            dataProcessing {
-                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                10 {
-                    references.fieldName = background_image
-                    as = backgroundImage
-                }
-
-                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                20 {
-                    references.fieldName = image
-                    as = images
-                }
-
-                1532633187 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
-                1532633187 {
-                    fieldName = background_image_options
-                }
-            }
+      orderBy = sorting
+      dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+          references.fieldName = background_image
+          as = backgroundImage
         }
+
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+          references.fieldName = image
+          as = images
+        }
+
+        1532633187 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
+        1532633187 {
+          fieldName = background_image_options
+        }
+      }
     }
+  }
 
 }
 
@@ -55,14 +55,14 @@ tt_content.carousel_fullscreen {
 ### RESPONSIVE IMAGES ###
 #########################
 lib.contentElement.settings.responsiveimages.contentelements {
-    carousel_fullscreen {
-        text_and_image {
-            multiplier {
-                default = 1.5
-                large = 1.2
-                medium = 1.2
-                small = 1.2
-            }
-        }
+  carousel_fullscreen {
+    text_and_image {
+      multiplier {
+        default = 1.5
+        large = 1.2
+        medium = 1.2
+        small = 1.2
+      }
     }
+  }
 }

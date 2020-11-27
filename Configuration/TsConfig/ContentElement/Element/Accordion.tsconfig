@@ -2,13 +2,14 @@
 #### NEW CONTENT ELEMENT WIZARD ####
 ####################################
 mod.wizards.newContentElement.wizardItems.interactive {
-    elements {
-        accordion {
-            title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.accordion
-            description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.accordion.description
-            tt_content_defValues.CType = accordion
-            iconIdentifier = content-t3ce-accordion
-        }
+  elements {
+    accordion {
+      title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.accordion
+      description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.accordion.description
+      tt_content_defValues.CType = accordion
+      iconIdentifier = content-t3ce-accordion
     }
-    show := addToList(accordion)
+  }
+
+  show := addToList(accordion)
 }

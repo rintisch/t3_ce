@@ -2,6 +2,6 @@
 #### CATEGORIES ####
 ####################
 mod.wizards.newContentElement.wizardItems {
-    interactive.header = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_group.interactive
+  interactive.header = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_group.interactive
 
 }

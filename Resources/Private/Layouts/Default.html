@@ -1,30 +1,40 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers" data-namespace-typo3-fluid="true">
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 <f:spaceless>
-    <rintisch:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}" />
+    <rintisch:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}"/>
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
     <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
     <f:if condition="{columnConfig}">
-        <rintisch:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
+        <rintisch:data.imageVariants
+            as="variants"
+            variants="{variants}"
+            multiplier="{columnConfig.multiplier}"
+            gutters="{columnConfig.gutters}"
+            corrections="{columnConfig.corrections}"/>
     </f:if>
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
-            <div id="c{data.uid}" class="container px-4 mx-auto frame-{data.frame_class} frame-type-{data.CType}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+            <div
+                id="c{data.uid}"
+                class="container px-4 mx-auto frame-{data.frame_class} frame-type-{data.CType}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>
                 <f:render section="Before" optional="true">
-                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                    <f:render partial="DropIn/Before/All" arguments="{_all}"/>
                 </f:render>
                 <f:render section="Header" optional="true">
-                    <f:render partial="Header/All" arguments="{_all}" />
+                    <f:render partial="Header/All" arguments="{_all}"/>
                 </f:render>
-                <f:render section="Main" optional="true" />
+                <f:render section="Main" optional="true"/>
                 <f:render section="Footer" optional="true">
-                    <f:render partial="Footer/All" arguments="{_all}" />
+                    <f:render partial="Footer/All" arguments="{_all}"/>
                 </f:render>
                 <f:render section="After" optional="true">
-                    <f:render partial="DropIn/After/All" arguments="{_all}" />
+                    <f:render partial="DropIn/After/All" arguments="{_all}"/>
                 </f:render>
             </div>
 
@@ -39,17 +49,17 @@
                 <div class="frame-space-before-{data.space_before_class}"></div>
             </f:if>
             <f:render section="Before" optional="true">
-                <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                <f:render partial="DropIn/Before/All" arguments="{_all}"/>
             </f:render>
             <f:render section="Header" optional="true">
-                <f:render partial="Header/All" arguments="{_all}" />
+                <f:render partial="Header/All" arguments="{_all}"/>
             </f:render>
-            <f:render section="Main" optional="true" />
+            <f:render section="Main" optional="true"/>
             <f:render section="Footer" optional="true">
-                <f:render partial="Footer/All" arguments="{_all}" />
+                <f:render partial="Footer/All" arguments="{_all}"/>
             </f:render>
             <f:render section="After" optional="true">
-                <f:render partial="DropIn/After/All" arguments="{_all}" />
+                <f:render partial="DropIn/After/All" arguments="{_all}"/>
             </f:render>
             <f:if condition="{data.space_after_class}">
                 <div class="frame-space-after-{data.space_after_class}"></div>

@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * This file was part of the package bk2k/bootstrap-package and is adapted here.

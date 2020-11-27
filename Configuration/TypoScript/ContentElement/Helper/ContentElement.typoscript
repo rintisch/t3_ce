@@ -4,32 +4,32 @@
 ##################################################
 lib.contentElement = FLUIDTEMPLATE
 lib.contentElement.settings {
-    responsiveimages {
-        variants {
-            default {
-                breakpoint = 1200
-                width = 1100
-            }
+  responsiveimages {
+    variants {
+      default {
+        breakpoint = 1200
+        width = 1100
+      }
 
-            large {
-                breakpoint = 992
-                width = 920
-            }
+      large {
+        breakpoint = 992
+        width = 920
+      }
 
-            medium {
-                breakpoint = 768
-                width = 680
-            }
+      medium {
+        breakpoint = 768
+        width = 680
+      }
 
-            small {
-                breakpoint = 576
-                width = 500
-            }
+      small {
+        breakpoint = 576
+        width = 500
+      }
 
-            extrasmall {
-                breakpoint = unset
-                width = 374
-            }
-        }
+      extrasmall {
+        breakpoint = unset
+        width = 374
+      }
     }
+  }
 }

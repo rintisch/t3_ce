@@ -9,8 +9,11 @@
 
 namespace Rintisch\T3Ce\ViewHelpers;
 
+use Closure;
+use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
@@ -38,23 +41,24 @@ class LastImageInfoViewHelper extends AbstractViewHelper
     /**
      * Initialize arguments.
      *
-     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
+     * @throws Exception
      */
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('property', 'string', 'Possible values: width, height, type, file, origFile, origFile_mtime, originalFile, processedFile, fileCacheHash');
+        $this->registerArgument('property', 'string',
+            'Possible values: width, height, type, file, origFile, origFile_mtime, originalFile, processedFile, fileCacheHash');
     }
 
     /**
      * @param array $arguments
-     * @param \Closure $renderChildrenClosure
+     * @param Closure $renderChildrenClosure
      * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
     public static function renderStatic(
         array $arguments,
-        \Closure $renderChildrenClosure,
+        Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
         if (self::getTypoScriptFrontendController()->lastImageInfo) {
@@ -67,7 +71,7 @@ class LastImageInfoViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @return \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
+     * @return TypoScriptFrontendController
      */
     protected static function getTypoScriptFrontendController()
     {

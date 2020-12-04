@@ -3,9 +3,13 @@
     <div class="valign h-full flex w-full items-center justify-center md:max-w-md xl:max-w-screen-lg mx-auto">
         <div class="vcontainer">
             <div class="carousel-text-inner">
-                <p class="carousel-header font-bold text-2xl md:text-4xl lg:text-5xl text-white {f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}"><f:format.htmlentitiesDecode>{item.data.header}</f:format.htmlentitiesDecode></p>
+                <p class="carousel-header font-bold text-2xl md:text-4xl lg:text-5xl text-white {f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}">
+                    <f:format.htmlentitiesDecode>{item.data.header}</f:format.htmlentitiesDecode>
+                </p>
                 <f:if condition="{item.data.subheader}">
-                    <p class="carousel-subheader {f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}"><f:format.htmlentitiesDecode>{item.data.subheader}</f:format.htmlentitiesDecode></p>
+                    <p class="carousel-subheader {f:if(condition: item.data.header_position, then: ' text-{item.data.header_position}')}">
+                        <f:format.htmlentitiesDecode>{item.data.subheader}</f:format.htmlentitiesDecode>
+                    </p>
                 </f:if>
             </div>
         </div>

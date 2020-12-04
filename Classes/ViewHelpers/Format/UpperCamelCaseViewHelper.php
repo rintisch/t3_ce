@@ -9,6 +9,7 @@
 
 namespace Rintisch\T3Ce\ViewHelpers\Format;
 
+use Closure;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
@@ -22,12 +23,12 @@ class UpperCamelCaseViewHelper extends AbstractViewHelper
 
     /**
      * @param array $arguments
-     * @param \Closure $renderChildrenClosure
+     * @param Closure $renderChildrenClosure
      * @param RenderingContextInterface $renderingContext
      *
      * @return string the formatted amount
      */
-    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    public static function renderStatic(array $arguments, Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
     {
         return str_replace(' ', '', ucwords(str_replace('_', ' ', strtolower($renderChildrenClosure()))));
     }

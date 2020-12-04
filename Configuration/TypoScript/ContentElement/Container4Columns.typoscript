@@ -1,27 +1,30 @@
 tt_content.t3ce-4cols-container =< lib.contentElement
 tt_content.t3ce-4cols-container {
-    templateName = Container4Columns
-    templateRootPaths.10 = EXT:t3_ce/Resources/Private/Templates
-    dataProcessing {
-        201 = B13\Container\DataProcessing\ContainerProcessor
-        201 {
-            colPos = 201
-            as = children1of4
-        }
-        202 = B13\Container\DataProcessing\ContainerProcessor
-        202 {
-            colPos = 202
-            as = children2of4
-        }
-        203 = B13\Container\DataProcessing\ContainerProcessor
-        203 {
-            colPos = 203
-            as = children3of4
-        }
-        204 = B13\Container\DataProcessing\ContainerProcessor
-        204 {
-            colPos = 204
-            as = children4of4
-        }
+  templateName = Container4Columns
+  templateRootPaths.10 = EXT:t3_ce/Resources/Private/Templates
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = children1of4
     }
+
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+      colPos = 202
+      as = children2of4
+    }
+
+    203 = B13\Container\DataProcessing\ContainerProcessor
+    203 {
+      colPos = 203
+      as = children3of4
+    }
+
+    204 = B13\Container\DataProcessing\ContainerProcessor
+    204 {
+      colPos = 204
+      as = children4of4
+    }
+  }
 }

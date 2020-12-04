@@ -1,246 +1,246 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-06-01UTC10:07:040">
-        <header>
-            <authorName>Gerald Rintisch</authorName>
-            <authorEmail>gerald.rintisch@posteo.de</authorEmail>
-        </header>
-        <body>
-            <trans-unit id="content_group.interactive">
-                <source>Interactive</source>
-            </trans-unit>
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-01UTC10:07:040">
+		<header>
+			<authorName>Gerald Rintisch</authorName>
+			<authorEmail>gerald.rintisch@posteo.de</authorEmail>
+		</header>
+		<body>
+			<trans-unit id="content_group.interactive">
+				<source>Interactive</source>
+			</trans-unit>
 
-            <trans-unit id="settings">
-                <source>Settings</source>
-            </trans-unit>
+			<trans-unit id="settings">
+				<source>Settings</source>
+			</trans-unit>
 
-            <trans-unit id="content_element.accordion">
-                <source>Accordion</source>
-            </trans-unit>
-            <trans-unit id="content_element.accordion.description">
-                <source>An inline relation record element for fancy accordion magic</source>
-            </trans-unit>
+			<trans-unit id="content_element.accordion">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="content_element.accordion.description">
+				<source>An inline relation record element for fancy accordion magic</source>
+			</trans-unit>
 
-            <trans-unit id="content_element.carousel">
-                <source>Carousel</source>
-            </trans-unit>
-            <trans-unit id="content_element.carousel.description">
-                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
-            </trans-unit>
+			<trans-unit id="content_element.carousel">
+				<source>Carousel</source>
+			</trans-unit>
+			<trans-unit id="content_element.carousel.description">
+				<source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
+			</trans-unit>
 
-            <trans-unit id="content_element.carousel_small">
-                <source>Carousel Small</source>
-            </trans-unit>
-            <trans-unit id="content_element.carousel_small.description">
-                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
-            </trans-unit>
+			<trans-unit id="content_element.carousel_small">
+				<source>Carousel Small</source>
+			</trans-unit>
+			<trans-unit id="content_element.carousel_small.description">
+				<source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
+			</trans-unit>
 
-            <trans-unit id="content_element.carousel_fullscreen">
-                <source>Carousel Fullscreen</source>
-            </trans-unit>
-            <trans-unit id="content_element.carousel_fullscreen.description">
-                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
-            </trans-unit>
+			<trans-unit id="content_element.carousel_fullscreen">
+				<source>Carousel Fullscreen</source>
+			</trans-unit>
+			<trans-unit id="content_element.carousel_fullscreen.description">
+				<source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source>
+			</trans-unit>
 
-            <trans-unit id="content_element.page_hero">
-                <source>Page Hero</source>
-            </trans-unit>
-            <trans-unit id="content_element.page_hero.description">
-                <source>Background Image with text as first element on a page.</source>
-            </trans-unit>
-
-
-            <trans-unit id="carousel.options">
-                <source>Carousel Options</source>
-            </trans-unit>
-            <trans-unit id="carousel.interval">
-                <source>Interval in ms</source>
-            </trans-unit>
-            <trans-unit id="carousel.transition">
-                <source>Transition</source>
-            </trans-unit>
-            <trans-unit id="carousel.transition.slide">
-                <source>Slide</source>
-            </trans-unit>
-            <trans-unit id="carousel.transition.fade">
-                <source>Fade</source>
-            </trans-unit>
-            <trans-unit id="carousel.wrap">
-                <source>Wrap</source>
-            </trans-unit>
-            <trans-unit id="carousel.wrap.description">
-                <source>Start the Carousel from the beginning once it has arrived at the end.</source>
-            </trans-unit>
-            <trans-unit id="carousel.show_nav_title">
-                <source>Show Navigation Title</source>
-            </trans-unit>
-            <trans-unit id="carousel.show_nav_title.description">
-                <source>Show the navigation title of the records instead of the bubbles.</source>
-            </trans-unit>
-
-            <trans-unit id="carousel_item">
-                <source>Carousel Item</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.tt_content">
-                <source>Carousel</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.link">
-                <source>Link</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header">
-                <source>Header</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_layout">
-                <source>Header Layout</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_class">
-                <source>Header Class</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_position">
-                <source>Header Position</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_position.default">
-                <source>Default</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_position.left">
-                <source>Left</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_position.center">
-                <source>Center</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.header_position.right">
-                <source>Right</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.subheader">
-                <source>Subheader</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.subheader_layout">
-                <source>Subheader Layout</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.subheader_class">
-                <source>Subheader Class</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.nav_title">
-                <source>Navigation Title</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.button_text">
-                <source>Button Text</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.bodytext">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.text_color">
-                <source>Text Color</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.image">
-                <source>Image</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.background_color">
-                <source>Background Color</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.background_image">
-                <source>Background Image</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.background_image_options">
-                <source>Background Image Options</source>
-            </trans-unit>
-
-            <trans-unit id="carousel_item.item_type.header">
-                <source>Header</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.text">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.calltoaction">
-                <source>Call to Action</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.image">
-                <source>Image</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.textandimage">
-                <source>Text and Image</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.backgroundimage">
-                <source>Background Image</source>
-            </trans-unit>
-            <trans-unit id="carousel_item.item_type.html">
-                <source>HTML</source>
-            </trans-unit>
-
-            <trans-unit id="field.background_image">
-                <source>Background Image</source>
-            </trans-unit>
-            <trans-unit id="field.background_image_options">
-                <source>Background Image Options</source>
-            </trans-unit>
-            <trans-unit id="field.readmore_label">
-                <source>Read More Label</source>
-            </trans-unit>
-            <trans-unit id=" field.background_color_class">
-                <source>Background Color</source>
-            </trans-unit>
-
-            <trans-unit id="tabs.background">
-                <source>Background</source>
-            </trans-unit>
+			<trans-unit id="content_element.page_hero">
+				<source>Page Hero</source>
+			</trans-unit>
+			<trans-unit id="content_element.page_hero.description">
+				<source>Background Image with text as first element on a page.</source>
+			</trans-unit>
 
 
-            <trans-unit id="option.background_image.parallax">
-                <source>Parallax</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.parallax.description">
-                <source>Enable Parallax effect</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.fade">
-                <source>Fade</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.fade.description">
-                <source>Enable Fade effect</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.filter">
-                <source>Filter</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.filter.none">
-                <source>None</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.filter.blur">
-                <source>Blur</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.filter.grayscale">
-                <source>Grayscale</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.filter.sepia">
-                <source>Sepia</source>
-            </trans-unit>
+			<trans-unit id="carousel.options">
+				<source>Carousel Options</source>
+			</trans-unit>
+			<trans-unit id="carousel.interval">
+				<source>Interval in ms</source>
+			</trans-unit>
+			<trans-unit id="carousel.transition">
+				<source>Transition</source>
+			</trans-unit>
+			<trans-unit id="carousel.transition.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="carousel.transition.fade">
+				<source>Fade</source>
+			</trans-unit>
+			<trans-unit id="carousel.wrap">
+				<source>Wrap</source>
+			</trans-unit>
+			<trans-unit id="carousel.wrap.description">
+				<source>Start the Carousel from the beginning once it has arrived at the end.</source>
+			</trans-unit>
+			<trans-unit id="carousel.show_nav_title">
+				<source>Show Navigation Title</source>
+			</trans-unit>
+			<trans-unit id="carousel.show_nav_title.description">
+				<source>Show the navigation title of the records instead of the bubbles.</source>
+			</trans-unit>
 
-            <trans-unit id="option.default">
-                <source>Default</source>
-            </trans-unit>
-            <trans-unit id="option.extrasmall">
-                <source>Extra Small</source>
-            </trans-unit>
-            <trans-unit id="option.small">
-                <source>Small</source>
-            </trans-unit>
-            <trans-unit id="option.medium">
-                <source>Medium</source>
-            </trans-unit>
-            <trans-unit id="option.large">
-                <source>Large</source>
-            </trans-unit>
+			<trans-unit id="carousel_item">
+				<source>Carousel Item</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.tt_content">
+				<source>Carousel</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_layout">
+				<source>Header Layout</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_class">
+				<source>Header Class</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_position">
+				<source>Header Position</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_position.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_position.left">
+				<source>Left</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_position.center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.header_position.right">
+				<source>Right</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.subheader">
+				<source>Subheader</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.subheader_layout">
+				<source>Subheader Layout</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.subheader_class">
+				<source>Subheader Class</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.nav_title">
+				<source>Navigation Title</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.button_text">
+				<source>Button Text</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.bodytext">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.text_color">
+				<source>Text Color</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.background_color">
+				<source>Background Color</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.background_image">
+				<source>Background Image</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.background_image_options">
+				<source>Background Image Options</source>
+			</trans-unit>
 
-            <trans-unit id="ratio.16_9">
-                <source>16:9</source>
-            </trans-unit>
-            <trans-unit id="ratio.4_3">
-                <source>4:3</source>
-            </trans-unit>
-            <trans-unit id="ratio.1_1">
-                <source>1:1</source>
-            </trans-unit>
-            <trans-unit id="ratio.free">
-                <source>Free</source>
-            </trans-unit>
-        </body>
-    </file>
+			<trans-unit id="carousel_item.item_type.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.calltoaction">
+				<source>Call to Action</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.textandimage">
+				<source>Text and Image</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.backgroundimage">
+				<source>Background Image</source>
+			</trans-unit>
+			<trans-unit id="carousel_item.item_type.html">
+				<source>HTML</source>
+			</trans-unit>
+
+			<trans-unit id="field.background_image">
+				<source>Background Image</source>
+			</trans-unit>
+			<trans-unit id="field.background_image_options">
+				<source>Background Image Options</source>
+			</trans-unit>
+			<trans-unit id="field.readmore_label">
+				<source>Read More Label</source>
+			</trans-unit>
+			<trans-unit id=" field.background_color_class">
+				<source>Background Color</source>
+			</trans-unit>
+
+			<trans-unit id="tabs.background">
+				<source>Background</source>
+			</trans-unit>
+
+
+			<trans-unit id="option.background_image.parallax">
+				<source>Parallax</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.parallax.description">
+				<source>Enable Parallax effect</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.fade">
+				<source>Fade</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.fade.description">
+				<source>Enable Fade effect</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.filter.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.filter.blur">
+				<source>Blur</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.filter.grayscale">
+				<source>Grayscale</source>
+			</trans-unit>
+			<trans-unit id="option.background_image.filter.sepia">
+				<source>Sepia</source>
+			</trans-unit>
+
+			<trans-unit id="option.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="option.extrasmall">
+				<source>Extra Small</source>
+			</trans-unit>
+			<trans-unit id="option.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="option.medium">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="option.large">
+				<source>Large</source>
+			</trans-unit>
+
+			<trans-unit id="ratio.16_9">
+				<source>16:9</source>
+			</trans-unit>
+			<trans-unit id="ratio.4_3">
+				<source>4:3</source>
+			</trans-unit>
+			<trans-unit id="ratio.1_1">
+				<source>1:1</source>
+			</trans-unit>
+			<trans-unit id="ratio.free">
+				<source>Free</source>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

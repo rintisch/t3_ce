@@ -2,15 +2,16 @@
 #### NEW CONTENT ELEMENT WIZARD ####
 ####################################
 mod.wizards.newContentElement.wizardItems.interactive {
-    elements {
-        carousel_fullscreen {
-            iconIdentifier = content-t3ce-carousel
-            title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.carousel_fullscreen
-            description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.carousel_fullscreen.description
-            tt_content_defValues {
-                CType = carousel_fullscreen
-            }
-        }
+  elements {
+    carousel_fullscreen {
+      iconIdentifier = content-t3ce-carousel
+      title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.carousel_fullscreen
+      description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.carousel_fullscreen.description
+      tt_content_defValues {
+        CType = carousel_fullscreen
+      }
     }
-    show := addToList(carousel_fullscreen)
+  }
+
+  show := addToList(carousel_fullscreen)
 }

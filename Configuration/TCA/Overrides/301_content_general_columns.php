@@ -31,7 +31,6 @@ $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
 ];
 
 
-
 $GLOBALS['TCA']['tt_content']['columns']['tx_t3ce_carousel_item'] = [
     'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item',
     'config' => [

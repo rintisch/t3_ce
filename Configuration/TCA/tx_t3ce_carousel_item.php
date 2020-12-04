@@ -7,7 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('lang')) {
+use TYPO3\CMS\Core\Resource\File;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+if (ExtensionManagementUtility::isLoaded('lang')) {
     $generalLanguageFile = 'EXT:lang/Resources/Private/Language/locallang_general.xlf';
 } else {
     $generalLanguageFile = 'EXT:core/Resources/Private/Language/locallang_general.xlf';
@@ -473,7 +476,7 @@ return [
         'image' => [
             'exclude' => true,
             'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.image',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 [
                     'appearance' => [
@@ -481,17 +484,17 @@ return [
                     ],
                     'overrideChildTca' => [
                         'types' => [
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                            File::FILETYPE_UNKNOWN => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                            File::FILETYPE_TEXT => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            File::FILETYPE_IMAGE => [
                                 'showitem' => '
                                     title,
                                     alternative,
@@ -499,17 +502,17 @@ return [
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                            File::FILETYPE_AUDIO => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                            File::FILETYPE_VIDEO => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                            File::FILETYPE_APPLICATION => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
@@ -535,7 +538,7 @@ return [
         'background_image' => [
             'exclude' => true,
             'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:carousel_item.background_image',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                 'background_image',
                 [
                     'appearance' => [
@@ -543,33 +546,33 @@ return [
                     ],
                     'overrideChildTca' => [
                         'types' => [
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                            File::FILETYPE_UNKNOWN => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                            File::FILETYPE_TEXT => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            File::FILETYPE_IMAGE => [
                                 'showitem' => '
                                     crop,
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                            File::FILETYPE_AUDIO => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                            File::FILETYPE_VIDEO => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '
                             ],
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                            File::FILETYPE_APPLICATION => [
                                 'showitem' => '
                                     --palette--;;filePalette
                                 '

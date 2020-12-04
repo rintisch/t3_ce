@@ -1,22 +1,24 @@
 tt_content.t3ce-3cols-container =< lib.contentElement
 tt_content.t3ce-3cols-container {
-    templateName = Container3Columns
-    templateRootPaths.10 = EXT:t3_ce/Resources/Private/Templates
-    dataProcessing {
-        201 = B13\Container\DataProcessing\ContainerProcessor
-        201 {
-            colPos = 201
-            as = children1of3
-        }
-        202 = B13\Container\DataProcessing\ContainerProcessor
-        202 {
-            colPos = 202
-            as = children2of3
-        }
-        203 = B13\Container\DataProcessing\ContainerProcessor
-        203 {
-            colPos = 203
-            as = children3of3
-        }
+  templateName = Container3Columns
+  templateRootPaths.10 = EXT:t3_ce/Resources/Private/Templates
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = children1of3
     }
+
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+      colPos = 202
+      as = children2of3
+    }
+
+    203 = B13\Container\DataProcessing\ContainerProcessor
+    203 {
+      colPos = 203
+      as = children3of3
+    }
+  }
 }

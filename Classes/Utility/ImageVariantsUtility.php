@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * This file was part of the package bk2k/bootstrap-package and is adapted here
@@ -105,7 +105,7 @@ class ImageVariantsUtility
         }
 
         if (!array_key_exists(1, $workingSizes)) {
-            $workingSizes[(float) 1 . ''] = ['multiplier' => 1];
+            $workingSizes[(float)1 . ''] = ['multiplier' => 1];
         }
         ksort($workingSizes);
         foreach ($workingSizes as $workingKey => $workingSettings) {
@@ -135,7 +135,7 @@ class ImageVariantsUtility
                 if ($key === 'sizes') {
                     continue;
                 } elseif (is_numeric($value) && $value > 0) {
-                    $variants[$variant][$key] = (int) $value;
+                    $variants[$variant][$key] = (int)$value;
                 } else {
                     unset($variants[$variant][$key]);
                 }
@@ -157,7 +157,7 @@ class ImageVariantsUtility
         $gutters = is_array($gutters) ? $gutters : [];
         foreach ($gutters as $variant => $value) {
             if (is_numeric($value) && $value > 0 && isset($variants[$variant]['width'])) {
-                $variants[$variant]['width'] = (int) ceil($variants[$variant]['width'] + $value);
+                $variants[$variant]['width'] = (int)ceil($variants[$variant]['width'] + $value);
             }
         }
         return $variants;
@@ -173,7 +173,7 @@ class ImageVariantsUtility
         $gutters = is_array($gutters) ? $gutters : [];
         foreach ($gutters as $variant => $value) {
             if (is_numeric($value) && $value > 0 && isset($variants[$variant]['width'])) {
-                $variants[$variant]['width'] = (int) ceil($variants[$variant]['width'] - $value);
+                $variants[$variant]['width'] = (int)ceil($variants[$variant]['width'] - $value);
             }
         }
         return $variants;
@@ -189,7 +189,7 @@ class ImageVariantsUtility
         $multiplier = is_array($multiplier) ? $multiplier : [];
         foreach ($multiplier as $variant => $value) {
             if (is_numeric($value) && $value > 0 && isset($variants[$variant]['width'])) {
-                $variants[$variant]['width'] = (int) ceil($variants[$variant]['width'] * $value);
+                $variants[$variant]['width'] = (int)ceil($variants[$variant]['width'] * $value);
             }
         }
         return $variants;
@@ -221,8 +221,8 @@ class ImageVariantsUtility
             !is_string($key) ||
             substr($key, -1, 1) !== 'x' ||
             !is_numeric(substr($key, 0, -1)) ||
-            (float) substr($key, 0, -1) < 1 ||
-            (float) substr($key, 0, -1) !== round((float) substr($key, 0, -1), 1)
+            (float)substr($key, 0, -1) < 1 ||
+            (float)substr($key, 0, -1) !== round((float)substr($key, 0, -1), 1)
         );
     }
 }

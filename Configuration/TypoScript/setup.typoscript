@@ -16,7 +16,7 @@ lib.contentElement {
 ###################################
 #### CONTENT ELEMENT RENDERING ####
 ###################################
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3_ce/Configuration/TypoScript/ContentElement" extensions="typoscript">
+@import "EXT:t3_ce/Configuration/TypoScript/ContentElement/*typoscript"
 
 
 

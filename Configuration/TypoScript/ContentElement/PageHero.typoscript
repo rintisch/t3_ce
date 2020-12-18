@@ -25,19 +25,3 @@ tt_content.page_hero {
     }
   }
 }
-
-
-#########################
-### RESPONSIVE IMAGES ###
-#########################
-lib.contentElement.settings.responsiveimages.contentelements {
-  page_hero {
-    multiplier {
-      default = 2
-      large = 1
-      medium = 1
-      small = 1
-    }
-  }
-}
-

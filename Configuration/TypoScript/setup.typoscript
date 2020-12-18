@@ -13,11 +13,6 @@ lib.contentElement {
   }
 }
 
-################
-#### HELPER ####
-################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_ce/Configuration/TypoScript/ContentElement/Helper/ContentElement.typoscript">
-
 ###################################
 #### CONTENT ELEMENT RENDERING ####
 ###################################

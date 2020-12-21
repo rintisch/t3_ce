@@ -60,7 +60,6 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero'] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     --palette--;;headers,
-                    bodytext,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
                     image,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
@@ -83,59 +82,6 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero'] = [
  * Configure element type
  */
 $additionalColumns = [
-    'background_image' => [
-        'exclude' => true,
-        'displayCond' => 'FIELD:frame_class:!=:none',
-        'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.background_image',
-        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-            'background_image',
-            [
-                'appearance' => [
-                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-                ],
-                'overrideChildTca' => [
-                    'types' => [
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
-                            'showitem' => '
-                            --palette--;;filePalette
-                        '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
-                            'showitem' => '
-                            --palette--;;filePalette
-                        '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                            'showitem' => '
-                            crop,
-                            --palette--;;filePalette
-                        '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
-                            'showitem' => '
-                            --palette--;;filePalette
-                        '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
-                            'showitem' => '
-                            --palette--;;filePalette
-                        '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
-                            'showitem' => '
-                            --palette--;;filePalette
-                        '
-                        ],
-                    ],
-                ],
-                'minitems' => 0,
-                'maxitems' => 1,
-            ],
-            $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-        ),
-        'l10n_mode' => 'exclude',
-    ],
-
     'readmore_label' => [
         'exclude' => true,
         'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.readmore_label',
@@ -153,13 +99,6 @@ $additionalColumns = [
  * Add fields to default palettes
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-    'tt_content',
-    'background_image',
-    'page_hero',
-    'after:space_after_class'
-);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',

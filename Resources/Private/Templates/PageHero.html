@@ -1,36 +1,30 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:rintisch="http://typo3.org/ns/Rintisch/PictureExtend/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
 <f:layout name="Hero"/>
 
 <f:section name="Main">
-    <f:variable name="firstBackgroundImage">{v:variable.get(name: 'backgroundImage.0')}</f:variable>
-    <section class="hero-image {f:if(condition: '{data.header} == \'\'', then: 'small')}">
-        <div class="image-container" style="background-image: url({f:uri.image(image: firstBackgroundImage)})"></div>
-        <div class="image-scrim"></div>
-        <div class="hero-image-overlay">
-            <div class="content-container">
-                <f:if condition="{data.header}">
-                    <h1>{data.header}</h1>
-                </f:if>
+    <section class="page-hero bg-primary-100 -m-0.5">
+        <f:for each="{images}" as="file">
+                <f:render partial="Media/Rendering/Image" arguments="{file: file, settings: settings, rounded: 0, pictureClass: 'object-cover h-full w-1/2 justify-self-end'}"/>
+            <div class="m-4">
+                    <f:if condition="{file.properties.title}">
+                        <h1 class="text-primary-900 font-medium">{file.properties.title}</h1>
+                    </f:if>
 
-                <f:if condition="{data.subheader}">
-                    <p class="h5">{data.subheader}</p>
-                </f:if>
+                    <f:if condition="{file.description -> f:format.nl2br()}">
+                        <p class="text-primary-800 font-medium mt-3 tracking-wide">{file.description -> f:format.nl2br()}</p>
+                    </f:if>
 
-                <f:if condition="{data.header}">
-                    <div class="dots"></div>
-                </f:if>
-
-                <f:if condition="{data.header_link}">
-                    <f:link.typolink parameter="{data.header_link}" class="link-button icon-text-button">
-                        {data.readmore_label -> f:format.htmlentities()}
-                    </f:link.typolink>
-                </f:if>
+                    <f:if condition="{data.header_link}">
+                        <f:link.typolink parameter="{data.header_link}" class="link-button icon-text-button">
+                            {data.readmore_label -> f:format.htmlentities()}
+                        </f:link.typolink>
+                    </f:if>
+                </div>
             </div>
-        </div>
+        </f:for>
     </section>
 
 </f:section>

@@ -6,8 +6,6 @@ tt_content.page_hero =< lib.contentElement
 tt_content.page_hero {
   templateName = PageHero
 
-  templateRootPaths.0 = EXT:t3_ce/Resources/Private/Templates
-
   ##########################
   ### DATA PREPROCESSING ###
   ##########################

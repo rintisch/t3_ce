@@ -1,19 +1,9 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:rintisch="http://typo3.org/ns/Rintisch/PictureExtend/ViewHelpers"
     data-namespace-typo3-fluid="true">
 <f:spaceless>
-    <rintisch:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}"/>
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
     <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
-    <f:if condition="{columnConfig}">
-        <rintisch:data.imageVariants
-            as="variants"
-            variants="{variants}"
-            multiplier="{columnConfig.multiplier}"
-            gutters="{columnConfig.gutters}"
-            corrections="{columnConfig.corrections}"/>
-    </f:if>
     <f:if condition="{data.frame_class} != none">
         <f:then>
 

@@ -14,14 +14,8 @@ tt_content.page_hero {
   dataProcessing {
     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
     10 {
-      references.fieldName = background_image
-      as = backgroundImage
-    }
-
-    20 = Rintisch\T3Ce\DataProcessing\FlexFormProcessor
-    20 {
-      fieldName = background_image_options
-      as = backgroundImageOptions
+      references.fieldName = image
+      as = images
     }
   }
 }

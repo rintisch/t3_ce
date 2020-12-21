@@ -60,6 +60,9 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero'] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     --palette--;;headers,
+                    bodytext,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
+                    image,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                     --palette--;;frames,
                     --palette--;;appearanceLinks,
@@ -133,19 +136,6 @@ $additionalColumns = [
         'l10n_mode' => 'exclude',
     ],
 
-    'background_image_options' => [
-        'exclude' => true,
-        'displayCond' => 'FIELD:frame_class:!=:none',
-        'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.background_image_options',
-        'config' => [
-            'type' => 'flex',
-            'ds' => [
-                'default' => 'FILE:EXT:t3_ce/Configuration/FlexForms/BackgroundImage.xml',
-            ],
-        ],
-        'l10n_mode' => 'exclude',
-    ],
-
     'readmore_label' => [
         'exclude' => true,
         'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.readmore_label',
@@ -169,12 +159,6 @@ $additionalColumns = [
     'background_image',
     'page_hero',
     'after:space_after_class'
-);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-    'tt_content',
-    'background_image_options',
-    'page_hero',
-    'after:background_image'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(

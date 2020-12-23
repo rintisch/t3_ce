@@ -67,6 +67,31 @@ $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['co
     'small' => $smallCropSettings
 ];
 
+$GLOBALS['TCA']['tx_sfeventmgt_domain_model_event']['columns']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']
+    = [
+    'large' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang_be.xlf:option.large',
+        'allowedAspectRatios' => [
+            '19:9' => $ratio16to9,
+        ],
+        'selectedRatio' => '16:9',
+    ],
+    'medium' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang_be.xlf:option.medium',
+        'allowedAspectRatios' => [
+            '19:9' => $ratio16to9,
+        ],
+        'selectedRatio' => '16:9',
+    ],
+    'small' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang_be.xlf:option.small',
+        'allowedAspectRatios' => [
+            '4:3' => $ratio4to3,
+        ],
+        'selectedRatio' => '4:3',
+    ],
+];
+
 /***************
  * Textpic content element
  */

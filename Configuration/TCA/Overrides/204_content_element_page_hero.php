@@ -55,8 +55,7 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['page_hero'] = 'conten
 /***************
  * Form configuration for edit form
  */
-$GLOBALS['TCA']['tt_content']['types']['page_hero'] = [
-    'showitem' => '
+$GLOBALS['TCA']['tt_content']['types']['page_hero']['showitem'] = '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     --palette--;;headers,
@@ -75,8 +74,7 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero'] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
                     rowDescription,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-            '
-];
+            ';
 
 /***************
  * Configure element type

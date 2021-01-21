@@ -12,12 +12,12 @@
                 arguments="{file: file, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg rounded-br-3xl overflow-hidden'}"/>
             <div class="">
                 <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4">
-                    <f:if condition="{file.properties.title}">
-                        <h1 class="text-gray-800 font-medium text-6xl">{file.properties.title}</h1>
+                    <f:if condition="{data.header}">
+                        <h1 class="text-gray-800 font-medium text-6xl">{data.header}</h1>
                     </f:if>
 
-                    <f:if condition="{file.description -> f:format.nl2br()}">
-                        <p class="text-gray-600 font-sans font-light mt-3 tracking-wide">{file.description -> f:format.nl2br()}</p>
+                    <f:if condition="{data.subheader}">
+                        <p class="text-gray-600 font-sans font-light mt-3 tracking-wide">{data.subheader}</p>
                     </f:if>
 
                     <f:if condition="{data.header_link}">

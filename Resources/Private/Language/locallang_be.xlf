@@ -38,6 +38,9 @@
 			<trans-unit id="field.readmore_label">
 				<source>Read More Label</source>
 			</trans-unit>
+			<trans-unit id="field.header_label">
+				<source>Header Label</source>
+			</trans-unit>
 			<trans-unit id=" field.background_color_class">
 				<source>Background Color</source>
 			</trans-unit>

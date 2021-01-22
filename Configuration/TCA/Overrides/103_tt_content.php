@@ -30,6 +30,19 @@ $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
     'l10n_mode' => 'exclude',
 ];
 
+
+$GLOBALS['TCA']['tt_content']['columns']['header_label'] = [
+    'exclude' => true,
+    'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.header_label',
+    'config' => [
+        'type' => 'input',
+        'eval' => 'trim',
+        'size' => 50,
+        'max' => 255
+    ]
+];
+
+
 /***************
  * Add fields to default palettes
  */
@@ -37,3 +50,11 @@ $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
     --linebreak--,
     background_color_class
 ';
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    'header_label',
+    '',
+    'before:header'
+);

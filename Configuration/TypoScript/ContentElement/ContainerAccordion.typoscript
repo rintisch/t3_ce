@@ -1,0 +1,12 @@
+tt_content.t3ce-accordion-container =< lib.contentElement
+tt_content.t3ce-accordion-container {
+  templateName = ContainerAccordion
+  templateRootPaths.10 = EXT:t3_ce/Resources/Private/Templates
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = children1of1
+    }
+  }
+}

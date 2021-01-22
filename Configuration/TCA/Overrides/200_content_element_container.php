@@ -98,4 +98,35 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-4cols-container']['showitem'] = '
         rowDescription,
 ';
 
+## Add 1col accordion container
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
+    't3ce-accordion-container',
+    'Accordion Container',
+    'Container to create an accordion',
+    [
+        [
+            ['name' => 'childs', 'colPos' => 201]
+        ]
+    ],
+    'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-accordion.svg'
+);
+$GLOBALS['TCA']['tt_content']['types']['t3ce-accordion-container']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+        --palette--;;language,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+        --palette--;;hidden,
+        --palette--;;access,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+        categories,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+        rowDescription,
+';
+
 

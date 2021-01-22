@@ -7,9 +7,30 @@
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
+            <f:variable name="frame">
+                <f:switch expression="{data.frame_class}">
+                    <f:case value="ruler-before">
+                        pt-8 md:pt-0 md:pl-16 border-t md:border-t-0 md:border-l
+                    </f:case>
+                    <f:case value="ruler-after">
+                        pb-8 md:pb-0 md:pr-16 border-b md:border-b-0 md:border-r
+                    </f:case>
+                    <f:case value="indent">
+                        py-8 md:py-0 md:px-16
+                    </f:case>
+                    <f:case value="indent-left">
+                        pt-8 md:pt-0 md:pl-16
+                    </f:case>
+                    <f:case value="indent-right">
+                        pb-8 md:pb-0 md:pr-16
+                    </f:case>
+                    <f:defaultCase>frame-{data.frame_class}</f:defaultCase>
+                </f:switch>
+            </f:variable>
+
             <div
                 id="c{data.uid}"
-                class="container px-4 mx-auto frame-{data.frame_class} frame-type-{data.CType}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+                class="record-container {frame} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>

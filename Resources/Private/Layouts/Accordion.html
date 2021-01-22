@@ -1,0 +1,47 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div
+        id="c{data.uid}"
+        class="container mx-auto{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+        <div class="mx-4 accordion relative">
+            <f:if condition="{data._LOCALIZED_UID}">
+                <a id="c{data._LOCALIZED_UID}"></a>
+            </f:if>
+
+            <div class="absolute left-0 top-0 mt-5 md:mt-3 transform -translate-x-1/2 bg-secondary-500">
+                <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
+                    <div class="js-open">+</div>
+                    <div class="js-close hidden">-</div>
+                    <svg
+                        class="absolute bottom-0 left-0 h-2 w-5 md:w-8 text-primary-500 transform translate-y-full"
+                        fill="currentColor"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                        aria-hidden="true">
+                        <polygon points="0,0 100,0 100,100"/>
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <header class="p-6 pl-8 md:pl-24">
+                <h3 class="leading-snug">{data.header}</h3>
+            </header>
+
+            <f:render section="Main" optional="true"/>
+
+            <svg
+                class="absolute bottom-0 right-0 h-2 w-8 text-primary-500 transform translate-y-full"
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true">
+                <polygon points="0,0 100,0 0,100"/>
+            </svg>
+        </div>
+    </div>
+</f:spaceless>
+</html>

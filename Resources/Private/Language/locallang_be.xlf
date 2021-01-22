@@ -17,8 +17,13 @@
 			<trans-unit id="content_element.accordion">
 				<source>Accordion</source>
 			</trans-unit>
+
+			<trans-unit id="content_element.container_accordion">
+				<source>Accordion-Container</source>
+			</trans-unit>
+
 			<trans-unit id="content_element.accordion.description">
-				<source>An inline relation record element for fancy accordion magic</source>
+				<source>A content element for fancy accordion magic</source>
 			</trans-unit>
 
 			<trans-unit id="content_element.page_hero">

@@ -13,9 +13,27 @@ TCEFORM {
           addItems {
             10 = 2:1
             20 = 1:2
+            30 = 2:3
+            40 = 3:2
           }
         }
       }
     }
+
+    frame_class {
+      altLabels {
+        ruler-before = Trenner links
+        ruler-after = Trenner rechts
+        indent = Abstand beidseitig
+        indent-right = Abstand rechts
+        indent-left = Abstand links
+      }
+    }
+
+    # Remove unused fields from accordion
+    header_layout.types.t3ce-accordion-container.disabled = 1
+    header_link.types.t3ce-accordion-container.disabled = 1
+    subheader.types.t3ce-accordion-container.disabled = 1
+    background_color_class.types.t3ce-accordion-container.disabled = 1
   }
 }

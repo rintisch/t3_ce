@@ -5,40 +5,40 @@
 
 <f:section name="Main">
 
-    <f:variable name="containerOne">1</f:variable>
-    <f:variable name="containerTwo">1</f:variable>
-    <f:variable name="gridColumns">2</f:variable>
+    <f:variable name="containerOne">col-span-1</f:variable>
+    <f:variable name="containerTwo">col-span-1</f:variable>
+    <f:variable name="gridColumns">md:grid-cols-2</f:variable>
 
     <f:switch expression="{data.layout}">
         <f:case value="10">
-            <f:variable name="containerOne">2</f:variable>
-            <f:variable name="containerTwo">1</f:variable>
-            <f:variable name="gridColumns">3</f:variable>
+            <f:variable name="containerOne">col-span-2</f:variable>
+            <f:variable name="containerTwo">col-span-1</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-3</f:variable>
         </f:case>
         <f:case value="20">
-            <f:variable name="containerOne">1</f:variable>
-            <f:variable name="containerTwo">2</f:variable>
-            <f:variable name="gridColumns">3</f:variable>
+            <f:variable name="containerOne">col-span-1</f:variable>
+            <f:variable name="containerTwo">col-span-2</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-3</f:variable>
         </f:case>
         <f:case value="30">
-            <f:variable name="containerOne">2</f:variable>
-            <f:variable name="containerTwo">3</f:variable>
-            <f:variable name="gridColumns">5</f:variable>
+            <f:variable name="containerOne">col-span-2</f:variable>
+            <f:variable name="containerTwo">col-span-3</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-5</f:variable>
         </f:case>
         <f:case value="40">
-            <f:variable name="containerOne">3</f:variable>
-            <f:variable name="containerTwo">2</f:variable>
-            <f:variable name="gridColumns">5</f:variable>
+            <f:variable name="containerOne">col-span-3</f:variable>
+            <f:variable name="containerTwo">col-span-2</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-5</f:variable>
         </f:case>
     </f:switch>
 
-    <div class="flex flex-col md:flex-row grid grid-cols-1 md:grid-cols-{gridColumns}">
-        <div class="col-span-{containerOne}">
+    <div class="flex flex-col md:flex-row grid grid-cols-1 {gridColumns}">
+        <div class="{containerOne}">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="col-span-{containerTwo}">
+        <div class="{containerTwo}">
             <f:for each="{children2of2}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

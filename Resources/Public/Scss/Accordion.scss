@@ -3,10 +3,22 @@
     max-height: 0;
 }
 
+.js-minus {
+    display: none;
+}
+
 /* :checked - resize to full height */
 .js-accordion {
 
     input:checked ~ .js-accordion-content {
         @apply max-h-screen;
+    }
+
+    input:checked ~ label .js-minus {
+        @apply block;
+    }
+
+    input:checked ~ label .js-plus {
+        @apply hidden;
     }
 }

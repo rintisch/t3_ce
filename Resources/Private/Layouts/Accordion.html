@@ -5,7 +5,7 @@
     <div
         id="c{data.uid}"
         class="container mx-auto{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
-        <div class="mx-4 accordion relative">
+        <div class="mx-4 pb-6 relative shadow md:pb-12">
             <f:if condition="{data._LOCALIZED_UID}">
                 <a id="c{data._LOCALIZED_UID}"></a>
             </f:if>
@@ -23,8 +23,6 @@
                         <polygon points="0,0 100,0 100,100"/>
                     </svg>
                 </div>
-
-
             </div>
 
             <header class="p-6 pl-8 md:pl-24">

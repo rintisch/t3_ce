@@ -89,9 +89,23 @@ $additionalColumns = [
             'size' => 50,
             'max' => 255
         ]
-    ]
+    ],
 ];
 
+$GLOBALS['TCA']['tt_content']['types']['page_hero'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['page_hero'],
+    [
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'enableRichtext' => true,
+                'cols' => 30,
+                'rows' => 1,
+                'type' => 'text',
+            ]
+        ]
+    ]
+]);
 
 /***************
  * Add fields to default palettes

@@ -5,34 +5,39 @@
     <div
         id="c{data.uid}"
         class="container mx-auto{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
-        <div class="mx-4 pb-6 relative shadow md:pb-12">
+        <div class="js-accordion mx-4 relative shadow hover:shadow-lg">
             <f:if condition="{data._LOCALIZED_UID}">
                 <a id="c{data._LOCALIZED_UID}"></a>
             </f:if>
 
-            <div class="absolute left-0 top-0 mt-5 md:mt-3 transform -translate-x-1/2 bg-secondary-500">
-                <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
-                    <div class="js-open">+</div>
-                    <div class="js-close hidden">-</div>
-                    <svg
-                        class="absolute bottom-0 left-0 h-2 w-5 md:w-8 text-primary-500 transform translate-y-full"
-                        fill="currentColor"
-                        viewBox="0 0 100 100"
-                        preserveAspectRatio="none"
-                        aria-hidden="true">
-                        <polygon points="0,0 100,0 100,100"/>
-                    </svg>
+            <f:comment><!-- Header of Accordion--></f:comment>
+            <input class="absolute opacity-0" id="tab-single-{data.uid}" type="checkbox">
+            <label class="block cursor-pointer" for="tab-single-{data.uid}">
+                <div class="absolute left-0 top-0 mt-5 md:mt-3 -ml-5 md:-ml-8 bg-secondary-500">
+                    <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
+                        <div class="js-open">+</div>
+                        <div class="js-close hidden">-</div>
+                        <svg
+                            class="absolute top-full left-0 h-2 w-5 md:w-8 text-primary-500"
+                            fill="currentColor"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            aria-hidden="true">
+                            <polygon points="0,0 100,0 100,100"/>
+                        </svg>
+                    </div>
                 </div>
-            </div>
 
-            <header class="p-6 pl-8 md:pl-24">
-                <h3 class="leading-snug">{data.header}</h3>
-            </header>
+                <header class="p-6 pl-8 md:pl-24">
+                    <h3 class="leading-snug">{data.header}</h3>
+                </header>
+            </label>
 
+            <f:comment><!-- Content of Accordion--></f:comment>
             <f:render section="Main" optional="true"/>
 
             <svg
-                class="absolute bottom-0 right-0 h-2 w-8 text-primary-500 transform translate-y-full"
+                class="absolute top-full right-0 h-2 w-8 text-primary-500"
                 fill="currentColor"
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"

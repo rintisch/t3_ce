@@ -4,10 +4,12 @@
 <f:layout name="Accordion"/>
 
 <f:section name="Main">
-    <div class="pl-6 pr-6 md:pl-24 md:pr-12">
-        <f:for each="{children1of1}" as="element">
-            {element.renderedContent -> f:format.raw()}
-        </f:for>
+    <div class="js-accordion-content overflow-hidden transition-all duration-300">
+        <div class="pl-6 pr-6 md:pl-24 md:pr-12 pb-6 md:pb-12 transition">
+            <f:for each="{children1of1}" as="element">
+                {element.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
     </div>
 </f:section>
 </html>

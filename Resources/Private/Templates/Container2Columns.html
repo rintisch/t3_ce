@@ -32,7 +32,7 @@
         </f:case>
     </f:switch>
 
-    <div class="grid grid-cols-1 md:grid-cols-{gridColumns}">
+    <div class="flex flex-col md:flex-row grid grid-cols-1 md:grid-cols-{gridColumns}">
         <div class="col-span-{containerOne}">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}

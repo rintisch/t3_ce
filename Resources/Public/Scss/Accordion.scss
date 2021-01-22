@@ -1,72 +1,12 @@
 /* Tab content - closed */
-.tab-content {
+.js-accordion-content {
     max-height: 0;
-    transition: max-height .35s;
 }
 
 /* :checked - resize to full height */
-.tab {
-    input + label {
-        @apply border-l-2;
-        @apply border-transparent;
-    }
+.js-accordion {
 
-    input:checked ~ .tab-content {
+    input:checked ~ .js-accordion-content {
         @apply max-h-screen;
-    }
-
-    /* Label formatting when open */
-    input:checked + label {
-        @apply p-5;
-        @apply border-l-2;
-        @apply border-primary-500;
-        @apply bg-gray-300;
-        @apply text-primary-500;
-    }
-
-    /* Icon */
-    label::after {
-        @apply float-right;
-        @apply right-0;
-        @apply top-0;
-        @apply block;
-        @apply w-8;
-        @apply h-8;
-        line-height: 1.8rem;
-        font-size: 2.2rem;
-        @apply text-center;
-        @apply duration-75;
-    }
-
-    /* Icon formatting - closed */
-    input[type=checkbox] + label::after {
-        content: "+";
-        @apply font-medium;
-        @apply border;
-        @apply rounded-full;
-        @apply border-gray-500;
-    }
-
-    input[type=radio] + label::after {
-        content: "\25BE";
-        @apply font-medium;
-        @apply border;
-        @apply rounded-full;
-        @apply border-gray-500;
-    }
-
-    /* Icon formatting - open */
-    input[type=checkbox]:checked + label::after {
-        @apply transform;
-        @apply rotate-45;
-        @apply bg-gray-500;
-        @apply text-gray-100;
-    }
-
-    input[type=radio]:checked + label::after {
-        @apply transform;
-        @apply rotate-180;
-        @apply bg-primary-500;
-        @apply text-gray-100;
     }
 }

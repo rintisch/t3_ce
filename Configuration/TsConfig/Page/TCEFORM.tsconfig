@@ -20,6 +20,38 @@ TCEFORM {
       }
     }
 
+    # for purceCSS: mt-4 mt-8 mt-16 mt-32 mt-64 mt-128
+    space_before_class {
+      removeItems = extra-small, small, medium, large, extra-large
+      addItems.4 = XS
+      addItems.8 = S
+      addItems.16 = M
+      addItems.32 = L
+      addItems.64 = XL
+      addItems.128 = XXL
+      addItems.1004 = -XS
+      addItems.1008 = -S
+      addItems.1016 = -M
+      addItems.1032 = -L
+      disableNoMatchingValueElement = 1
+    }
+
+    # for purceCSS: mb-4 mb-8 mb-16 mb-32 mb-64 mb-128
+    space_after_class {
+      removeItems = extra-small, small, medium, large, extra-large
+      addItems.4 = XS
+      addItems.8 = S
+      addItems.16 = M
+      addItems.32 = L
+      addItems.64 = XL
+      addItems.128 = XXL
+      addItems.1004 = -XS
+      addItems.1008 = -S
+      addItems.1016 = -M
+      addItems.1032 = -L
+      disableNoMatchingValueElement = 1
+    }
+
     frame_class {
       altLabels {
         ruler-before = Trenner links
@@ -27,6 +59,9 @@ TCEFORM {
         indent = Abstand beidseitig
         indent-right = Abstand rechts
         indent-left = Abstand links
+      }
+      addItems {
+        full-width = Volle Breite
       }
     }
 

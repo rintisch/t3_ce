@@ -28,9 +28,35 @@
                 </f:switch>
             </f:variable>
 
+            <f:variable name="spaceTop">
+                <f:if condition="{data.space_before_class}">
+                    <f:if condition="{data.space_before_class} < 1000">
+                        <f:then>
+                            mt-{data.space_before_class}
+                        </f:then>
+                        <f:else>
+                            mt-0 md:-mt-{data.space_before_class - 1000}
+                        </f:else>
+                    </f:if>
+                </f:if>
+            </f:variable>
+
+            <f:variable name="spaceBottom">
+                <f:if condition="{data.space_after_class}">
+                    <f:if condition="{data.space_after_class} < 1000">
+                        <f:then>
+                            mb-{data.space_after_class}
+                        </f:then>
+                        <f:else>
+                            mt-0 md:-mb-{data.space_after_class - 1000}
+                        </f:else>
+                    </f:if>
+                </f:if>
+            </f:variable>
+
             <div
                 id="c{data.uid}"
-                class="record-container {frame} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+                class="{f:if(condition: '{data.frame_class} != full-width', then: 'record-container ', else: 'relative -z-10')}{frame} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: '{data.space_before_class}', then: ' {spaceTop}')}{f:if(condition: '{data.space_after_class}', then: ' {spaceBottom}')}">
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>

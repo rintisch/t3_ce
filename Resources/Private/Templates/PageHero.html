@@ -1,5 +1,6 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
 <f:layout name="Hero"/>
@@ -9,11 +10,11 @@
         <f:for each="{images}" as="file">
             <f:render
                 partial="Media/Rendering/Image"
-                arguments="{file: file, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg rounded-br-3xl overflow-hidden'}"/>
+                arguments="{file: file, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg md:rounded-bl-none lg:rounded-bl-lg lg:rounded-br-lg overflow-hidden'}"/>
             <div class="">
                 <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4">
                     <f:if condition="{data.header}">
-                        <h1 class="text-gray-800 font-medium text-6xl">{data.header}</h1>
+                        <h1 class="text-gray-800 font-medium text-6xl">{data.header -> f:format.html() -> rintisch:format.removeParagraph()}</h1>
                     </f:if>
 
                     <f:if condition="{data.subheader}">

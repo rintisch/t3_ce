@@ -2,11 +2,8 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true">
 <f:spaceless>
-    <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
-    <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
     <f:if condition="{data.frame_class} != none">
         <f:then>
-
             <f:variable name="frame">
                 <f:switch expression="{data.frame_class}">
                     <f:case value="ruler-before">

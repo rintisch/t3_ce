@@ -11,7 +11,7 @@
 .js-accordion {
 
     input:checked ~ .js-accordion-content {
-        @apply max-h-screen;
+        max-height: 1000vh;
     }
 
     input:checked ~ label .js-minus {

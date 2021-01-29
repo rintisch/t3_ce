@@ -1,6 +1,6 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:rintisch="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
+    xmlns:t3ce="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
 <f:layout name="Hero"/>
@@ -14,7 +14,7 @@
             <div class="">
                 <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4">
                     <f:if condition="{data.header}">
-                        <h1 class="text-gray-800 font-medium text-6xl">{data.header -> rintisch:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
+                        <h1 class="text-gray-800 font-medium text-6xl">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
                     </f:if>
 
                     <f:if condition="{data.subheader}">

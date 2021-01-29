@@ -4,7 +4,7 @@
 <f:spaceless>
     <div
         id="c{data.uid}"
-        class="{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+        class="frame-type-{data.CType}{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
         <f:if condition="{data._LOCALIZED_UID}">
             <a id="c{data._LOCALIZED_UID}"></a>
         </f:if>

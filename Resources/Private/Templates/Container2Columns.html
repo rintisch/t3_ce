@@ -30,10 +30,22 @@
             <f:variable name="containerTwo">col-span-2</f:variable>
             <f:variable name="gridColumns">md:grid-cols-5</f:variable>
         </f:case>
+        <f:case value="50">
+            <f:variable name="containerOne">col-span-1</f:variable>
+            <f:variable name="containerTwo">col-span-3</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-4</f:variable>
+        </f:case>
+        <f:case value="60">
+            <f:variable name="containerOne">col-span-3</f:variable>
+            <f:variable name="containerTwo">col-span-1</f:variable>
+            <f:variable name="gridColumns">md:grid-cols-4</f:variable>
+        </f:case>
     </f:switch>
 
+    <f:variable name="separatorLine">pb-8 border-b mb-8 md:pb-0 md:pr-12 md:mr-12 md:border-b-0 md:border-r</f:variable>
+
     <div class="flex flex-col md:flex-row grid grid-cols-1 {gridColumns}">
-        <div class="{containerOne}">
+        <div class="{containerOne}{f:if(condition:'{data.frame_class} == separator', then: ' {separatorLine}')}">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

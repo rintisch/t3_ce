@@ -4,6 +4,12 @@
 TCEFORM {
   tt_content {
     layout {
+      addItems {
+        8 = Schmal
+        12 = Überbreite
+        100 = 100% Breite
+      }
+
       types {
         t3ce-2cols-container {
           altLabels {
@@ -15,12 +21,14 @@ TCEFORM {
             20 = 1:2
             30 = 2:3
             40 = 3:2
+            50 = 1:3
+            60 = 3:1
           }
         }
       }
     }
 
-    # for purceCSS: mt-4 mt-8 mt-16 mt-32 mt-64 mt-128
+    # for purgeCSS: mt-4 mt-8 mt-16 mt-32 mt-64 mt-128
     space_before_class {
       removeItems = extra-small, small, medium, large, extra-large
       addItems.4 = XS
@@ -29,14 +37,10 @@ TCEFORM {
       addItems.32 = L
       addItems.64 = XL
       addItems.128 = XXL
-      addItems.1004 = -XS
-      addItems.1008 = -S
-      addItems.1016 = -M
-      addItems.1032 = -L
       disableNoMatchingValueElement = 1
     }
 
-    # for purceCSS: mb-4 mb-8 mb-16 mb-32 mb-64 mb-128
+    # for purgeCSS: mb-4 mb-8 mb-16 mb-32 mb-64 mb-128
     space_after_class {
       removeItems = extra-small, small, medium, large, extra-large
       addItems.4 = XS
@@ -45,24 +49,11 @@ TCEFORM {
       addItems.32 = L
       addItems.64 = XL
       addItems.128 = XXL
-      addItems.1004 = -XS
-      addItems.1008 = -S
-      addItems.1016 = -M
-      addItems.1032 = -L
       disableNoMatchingValueElement = 1
     }
 
     frame_class {
-      altLabels {
-        ruler-before = Trenner links
-        ruler-after = Trenner rechts
-        indent = Abstand beidseitig
-        indent-right = Abstand rechts
-        indent-left = Abstand links
-      }
-      addItems {
-        full-width = Volle Breite
-      }
+      removeItems = ruler-before, ruler-after, indent-left, indent-right, indent
     }
 
     # Remove unused fields from accordion
@@ -70,5 +61,11 @@ TCEFORM {
     header_link.types.t3ce-accordion-container.disabled = 1
     subheader.types.t3ce-accordion-container.disabled = 1
     background_color_class.types.t3ce-accordion-container.disabled = 1
+    frame_class.types.t3ce-2cols-container.addItems.separator = Trennlinie
+    frame_class.types.t3ce-3cols-container.addItems.separator = Trennlinie
+    frame_class.types.t3ce-4cols-container.addItems.separator = Trennlinie
+    frame_class.types.t3ce-2cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none
+    frame_class.types.t3ce-3cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none
+    frame_class.types.t3ce-4cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none
   }
 }

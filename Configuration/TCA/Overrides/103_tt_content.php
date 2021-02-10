@@ -9,22 +9,69 @@
 
 defined('TYPO3_MODE') || die();
 
+$ll = 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:';
+
 /***************
  * Adjust columns for generic usage
  */
 $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
     'exclude' => true,
     'displayCond' => 'FIELD:frame_class:!=:none',
-    'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.background_color_class',
+    'label' => $ll . 'field.background_color_class',
     'config' => [
         'type' => 'select',
         'renderType' => 'selectSingle',
         'items' => [
             ['none', 'none'],
-            ['primary', 'theme-primary'],
-            ['secondary', 'theme-secondary'],
-            ['light', 'theme-light'],
-            ['dark', 'theme-dark']
+            ['Primärfarbe 500', 'bg-primary-500'],
+            ['Sekundärfarbe 500', 'bg-secondary-500'],
+            ['Grau 100', 'bg-gray-100'],
+            ['Grau 200', 'bg-gray-200'],
+            ['Grau 300', 'bg-gray-300'],
+            ['Grau 400', 'bg-gray-400'],
+            ['Grau 500', 'bg-gray-500']
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
+
+# for purgeCSS: pt-2 pt-4 pt-8 pt-16 pt-32
+$GLOBALS['TCA']['tt_content']['columns']['padding_top'] = [
+    'exclude' => true,
+    'displayCond' => 'FIELD:frame_class:!=:none',
+    'label' => $ll . 'field.padding_top',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['Standard', ''],
+            ['0', '0'],
+            ['XS', '2'],
+            ['S', '4'],
+            ['M', '8'],
+            ['L', '16'],
+            ['XL', '32'],
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
+
+# for purgeCSS: pb-2 pb-4 pb-8 pb-16 pb-32
+$GLOBALS['TCA']['tt_content']['columns']['padding_bottom'] = [
+    'exclude' => true,
+    'displayCond' => 'FIELD:frame_class:!=:none',
+    'label' => $ll . 'field.padding_bottom',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['Standard', ''],
+            ['0', '0'],
+            ['XS', '2'],
+            ['S', '4'],
+            ['M', '8'],
+            ['L', '16'],
+            ['XL', '32'],
         ]
     ],
     'l10n_mode' => 'exclude',
@@ -46,9 +93,12 @@ $GLOBALS['TCA']['tt_content']['columns']['header_label'] = [
 /***************
  * Add fields to default palettes
  */
-$GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
+$GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] = '
+    layout, frame_class, background_color_class,
     --linebreak--,
-    background_color_class
+    space_before_class, space_after_class,
+    --linebreak--,
+    padding_top, padding_bottom
 ';
 
 

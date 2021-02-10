@@ -33,3 +33,6 @@ foreach ($icons as $icon) {
         ['source' => 'EXT:t3_ce/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
     );
 }
+
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = \Rintisch\T3Ce\Hooks\BackendContentHook::class;

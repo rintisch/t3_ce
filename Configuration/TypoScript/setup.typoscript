@@ -19,5 +19,11 @@ lib.contentElement {
 @import "EXT:t3_ce/Configuration/TypoScript/ContentElement/*typoscript"
 
 
+lib.contentElement{
+  settings {
+    containerBaseWidth = 2
+  }
+}
+
 
 

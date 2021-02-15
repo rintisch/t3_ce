@@ -18,6 +18,7 @@
             </f:variable>
 
             <f:comment><!-- LAYOUT --></f:comment>
+            <f:variable name="baseWidth">{settings.containerBaseWidth}</f:variable>
             <f:variable name="layout">
                 <f:if condition="{data.tx_container_parent} == 0">
                     <f:then>
@@ -26,12 +27,12 @@
                                 mx-0 px-0 mx-auto
                             </f:case>
                             <f:case value="12">
-                                max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4
+                                max-w-{baseWidth}xl md:max-w-{baseWidth + 1}xl lg:max-w-{baseWidth + 3}xl xl:max-w-{baseWidth + 4}xl mx-auto px-4
                             </f:case>
                             <f:case value="8">
-                                max-w-2xl md:max-w-3xl mx-auto px-4
+                                max-w-{baseWidth}xl md:max-w-{baseWidth +1}xl mx-auto px-4
                             </f:case>
-                            <f:defaultCase>max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4</f:defaultCase>
+                            <f:defaultCase>max-w-{baseWidth}xl md:max-w-{baseWidth + 1}xl lg:max-w-{baseWidth + 3}xl mx-auto px-4</f:defaultCase>
                         </f:switch>
                     </f:then>
                     <f:else></f:else>

@@ -60,7 +60,6 @@ TCEFORM {
     header_layout.types.t3ce-accordion-container.disabled = 1
     header_link.types.t3ce-accordion-container.disabled = 1
     subheader.types.t3ce-accordion-container.disabled = 1
-    background_color_class.types.t3ce-accordion-container.disabled = 1
     frame_class.types.t3ce-2cols-container.addItems.separator = Trennlinie
     frame_class.types.t3ce-3cols-container.addItems.separator = Trennlinie
     frame_class.types.t3ce-4cols-container.addItems.separator = Trennlinie

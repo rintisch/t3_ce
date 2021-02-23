@@ -3,8 +3,8 @@
     data-namespace-typo3-fluid="true">
 <f:spaceless>
     <div
-        id="c{data.uid}"
-        class="max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl sm:px-6 md:px-12 lg:px-4 mx-auto{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
+        id="c{data.uid}"<
+        class="max-w-2xl md:max-w-3xl lg:max-w-5xl sm:px-6 md:px-12 lg:px-4 mx-auto{f:if(condition: data.space_before_class, then: ' mt-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' mb-{data.space_after_class}')}">
         <div class="js-accordion mx-6 sm:mx-0 relative shadow hover:shadow-lg{f:if(condition: data.background_color_class, then: ' {data.background_color_class}')} bg-opacity-75">
             <f:if condition="{data._LOCALIZED_UID}">
                 <a id="c{data._LOCALIZED_UID}"></a>
@@ -13,7 +13,7 @@
             <f:comment><!-- Header of Accordion--></f:comment>
             <input class="absolute opacity-0" id="tab-single-{data.uid}" type="checkbox">
             <label class="block cursor-pointer" for="tab-single-{data.uid}">
-                <div class="absolute left-0 top-0 mt-5 md:mt-3 -ml-5 md:-ml-8 bg-secondary-500">
+                <div class="absolute left-0 top-0 mt-5 md:mt-4 -ml-5 md:-ml-8 bg-secondary-500">
                     <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
                         <div class="js-icon relative w-6 h-6 md:w-8 md:h-8"></div>
                         <svg
@@ -27,7 +27,7 @@
                     </div>
                 </div>
 
-                <header class="p-6 pl-8 md:pl-12 lg:pl-24">
+                <header class="p-6 pl-8 md:p-8 md:pl-12 lg:pl-24">
                     <h3 class="leading-snug">{data.header}</h3>
                 </header>
             </label>

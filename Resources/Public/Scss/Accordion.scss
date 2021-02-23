@@ -3,8 +3,28 @@
     max-height: 0;
 }
 
-.js-minus {
-    display: none;
+.js-icon {
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background: white;
+        transition: 150ms all ease-out;
+        left: 0px;
+        right: 0px;
+        height: 4px;
+        top: 11px;
+
+        @screen md {
+            height: 6px;
+            top: 13px;
+        }
+    }
+
+    &:after {
+        transform: rotate(-90deg);
+    }
 }
 
 /* :checked - resize to full height */
@@ -14,11 +34,9 @@
         max-height: 1000vh;
     }
 
-    input:checked ~ label .js-minus {
-        @apply block;
-    }
-
-    input:checked ~ label .js-plus {
-        @apply hidden;
+    input:checked ~ label .js-icon {
+        &:after {
+            transform: rotate(0deg);
+        }
     }
 }

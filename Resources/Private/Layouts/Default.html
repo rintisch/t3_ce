@@ -1,5 +1,6 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:t3ce="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
     data-namespace-typo3-fluid="true">
 <f:spaceless>
     <f:if condition="{data.frame_class} != none">
@@ -82,9 +83,12 @@
                 </f:switch>
             </f:variable>
 
+            <f:comment><!-- MAKE CLASSES SPACELESS --></f:comment>
+            <f:variable name="ceClasses"><t3ce:format.makeSingleline>{marginTop}{marginBottom}{paddingBottom}{paddingTop}{backgroundColor}</t3ce:format.makeSingleline></f:variable>
+
             <div
                 id="c{data.uid}"
-                class="{marginTop}{marginBottom}{paddingBottom}{paddingTop}{backgroundColor}">
+                class="{ceClasses}">
                 <div class="{layout}">
                     <f:if condition="{data._LOCALIZED_UID}">
                         <a id="c{data._LOCALIZED_UID}"></a>

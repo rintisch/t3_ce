@@ -13,6 +13,7 @@ class BackendContentHook implements PageLayoutViewDrawFooterHookInterface
 
     /**
      * Preprocesses the preview footer rendering of a content element.
+     * Todo: Needs refactoring when dropping v9 support because PageLayoutView is deprecated
      *
      * @param \TYPO3\CMS\Backend\View\PageLayoutView $parentObject Calling parent object
      * @param string $info Processed values

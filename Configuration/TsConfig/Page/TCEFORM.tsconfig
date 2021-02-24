@@ -54,6 +54,7 @@ TCEFORM {
 
     frame_class {
       removeItems = ruler-before, ruler-after, indent-left, indent-right, indent
+      addItems.center = Zentriert
     }
 
     # Remove unused fields from accordion

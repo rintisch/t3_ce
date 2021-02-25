@@ -102,12 +102,12 @@
 
             <div
                 id="c{data.uid}"
-                class="{ceClasses}">
+                class="{ceClasses} anchor">
                 <div{f:if(condition:'{data.tx_container_parent} == 0', then: ' class="{contentContainer}"')}>
                     <f:if condition="{data.tx_container_parent} == 0">
-                        <div class="{offset}"></div>
+                        <div{f:if(condition:'{offset}', then: ' class="{offset}"')}></div>
                     </f:if>
-                    <div class="{contentWidth}">
+                    <div class="{contentWidth} ce-{data.CType}">
                         <f:if condition="{data._LOCALIZED_UID}">
                             <a id="c{data._LOCALIZED_UID}"></a>
                         </f:if>

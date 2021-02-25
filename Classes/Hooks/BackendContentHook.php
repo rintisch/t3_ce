@@ -20,12 +20,16 @@ class BackendContentHook implements PageLayoutViewDrawFooterHookInterface
      * @param array $row Record row of tt_content
      */
     public function preProcess(\TYPO3\CMS\Backend\View\PageLayoutView &$parentObject, &$info, array &$row){
-        if ($row['padding_top'] != '') {
-            $info[] = "Padding oben: " . $row['padding_top'];
+        if ($row['padding_top'] != '' || $row['padding_bottom'] != '') {
+            $info[] = "Innerer Abstand:";
+            if ($row['padding_top'] != '') {
+                $info[] .= " oben = " . $row['padding_top'];
+            }
+            if ($row['padding_bottom'] != '') {
+                $info[] = " unten = " . $row['padding_bottom'];
+            }
         }
-        if ($row['padding_bottom'] != '') {
-            $info[] = "Padding unten: " . $row['padding_bottom'];
-        }
+
         if ($row['background_color_class'] != 'none') {
             $info[] = "Hintergrundfarbe: " . $row['background_color_class'];
         }

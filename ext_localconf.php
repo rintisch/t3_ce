@@ -36,3 +36,15 @@ foreach ($icons as $icon) {
 
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawFooter'][] = \Rintisch\T3Ce\Hooks\BackendContentHook::class;
+
+/**
+ * Add UserTSConfig: Increase size of thumbnails
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+        options{
+            file_list.thumbnail {
+                width = 256
+                height = 256
+            }
+        }
+');

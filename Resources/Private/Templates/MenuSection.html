@@ -3,14 +3,14 @@
 <f:section name="Main">
 
     <f:if condition="{menu}">
-        <ul>
+        <ul class="w-full">
             <f:for each="{menu}" as="page">
                 <li>
                     <f:if condition="{page.content}">
-                        <ul class="flex flex-row font-sans">
+                        <ul class="flex flex-col md:flex-row font-sans flex-wrap">
                             <f:for each="{page.content}" as="element" iteration="iterator">
                                 <f:if condition="{element.data.header}">
-                                <li{f:if(condition:'!{iterator.isLast}', then: ' class="pr-6"')}>
+                                <li class="pb-2 {f:if(condition:'!{iterator.isLast}', then: ' md:pr-4 md:pb-3')}">
                                     <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}" class="btn btn-outline btn-shallow">
                                         <span>{element.data.header}</span>
                                     </a>

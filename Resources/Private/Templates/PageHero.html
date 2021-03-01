@@ -7,10 +7,11 @@
 
 <f:section name="Main">
     <section class="hero grid -m-0.5 overflow-hidden items-center lg:container lg:mx-auto">
-        <f:for each="{images}" as="file">
+        <f:if condition="{images.0}">
             <f:render
                 partial="Media/Rendering/Image"
-                arguments="{file: file, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg md:rounded-bl-none lg:rounded-bl-lg lg:rounded-br-lg overflow-hidden'}"/>
+                arguments="{file: images.0, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg md:rounded-bl-none lg:rounded-bl-lg lg:rounded-br-lg overflow-hidden'}"/>
+        </f:if>
             <div class="">
                 <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4">
                     <f:if condition="{data.header}">
@@ -28,7 +29,6 @@
                     </f:if>
                 </div>
             </div>
-        </f:for>
     </section>
 
 </f:section>

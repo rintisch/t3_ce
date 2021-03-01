@@ -8,9 +8,9 @@
         <f:comment><!-- Header of Accordion--></f:comment>
         <input class="absolute opacity-0" id="tab-single-{data.uid}" type="checkbox">
         <label class="block cursor-pointer" for="tab-single-{data.uid}">
-            <div class="absolute left-0 top-0 mt-5 md:mt-4 -ml-5 md:-ml-8 bg-secondary-500">
+            <div class="absolute left-0 top-0 mt-5 md:mt-2 lg:mt-3 -ml-5 md:-ml-8 bg-secondary-500">
                 <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
-                    <div class="js-icon relative w-6 h-6 md:w-8 md:h-8"></div>
+                    <div class="js-icon relative w-6 h-6"></div>
                     <svg
                         class="absolute top-full left-0 h-2 w-5 md:w-8 text-primary-500"
                         fill="currentColor"
@@ -22,14 +22,14 @@
                 </div>
             </div>
 
-            <header class="p-6 pl-8 md:p-8 md:pl-12 lg:pl-24">
+            <header class="p-6 pl-8 md:pl-12 lg:pl-16">
                 <h3 class="leading-snug">{data.header}</h3>
             </header>
         </label>
 
         <f:comment><!-- Content of Accordion--></f:comment>
         <div class="js-accordion-content overflow-hidden transition-all duration-300">
-            <div class="pl-6 pr-6 md:pl-12 lg:pl-24 md:pr-12 pb-6 md:pb-12 transition">
+            <div class="pl-6 pr-6 md:pl-12 lg:pl-16 md:pr-12 pb-6 md:pb-12 transition">
                 <f:for each="{children1of1}" as="element">
                     {element.renderedContent -> f:format.raw()}
                 </f:for>

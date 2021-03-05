@@ -17,13 +17,3 @@ lib.contentElement {
 #### CONTENT ELEMENT RENDERING ####
 ###################################
 @import "EXT:t3_ce/Configuration/TypoScript/ContentElement/*typoscript"
-
-
-lib.contentElement{
-  settings {
-    containerBaseWidth = 2
-  }
-}
-
-
-

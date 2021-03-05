@@ -25,6 +25,7 @@ $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
             ['none', 'none'],
             ['Primärfarbe 500', 'bg-primary-500'],
             ['Sekundärfarbe 500', 'bg-secondary-500'],
+            ['Weiß', 'bg-white'],
             ['Grau 100', 'bg-gray-100'],
             ['Grau 200', 'bg-gray-200'],
             ['Grau 300', 'bg-gray-300'],

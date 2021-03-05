@@ -2,6 +2,18 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     xmlns:t3ce="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
     data-namespace-typo3-fluid="true">
+
+<f:comment>
+    <!-- This layout create a flexbox grid with gutters. -->
+    <div id="c-24" class="mt-0 mb-0 pt-8 pb-8">
+        <div class="px-2 mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 xl:px-8">
+            <div class="flex flex-row justify-start -mx-1 lg:-mx-2">
+                <div class="px-1 lg:px-2 w-0 md:w-1/12"></div> // This is just an offset and optional depending on `frame_class`
+                <div class="px-1 lg:px-2 w-full md:w-10/12 ce-text">HERE IS THE REAL CONTENT</div>
+            </div>
+        </div>
+    </div>
+</f:comment>
 <f:spaceless>
     <f:if condition="{data.frame_class} != none">
         <f:then>
@@ -54,11 +66,9 @@
             </f:variable>
 
             <f:comment><!-- LAYOUT --></f:comment>
-            <f:variable name="baseWidth">{settings.containerBaseWidth}</f:variable>
             <f:variable name="contentContainer">
                 <t3ce:format.makeSingleline>
-                    flex flex-row justify-start mx-auto px-4
-                    max-w-{baseWidth}xl md:max-w-{baseWidth + 1}xl lg:max-w-{baseWidth + 3}xl xl:max-w-{baseWidth + 4}xl
+                    mx-auto px-4 xl:px-8 max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl
                 </t3ce:format.makeSingleline>
             </f:variable>
 
@@ -67,10 +77,10 @@
                 <t3ce:format.makeSingleline>
                     w-0
                     <f:switch expression="{data.frame_class}">
-                        <f:case value="small-left">md:w-1/12</f:case>
-                        <f:case value="small-center">md:w-2/12</f:case>
+                        <f:case value="small-left">px-1 lg:px-2 md:w-1/12</f:case>
+                        <f:case value="small-center">px-1 lg:px-2 md:w-2/12</f:case>
                         <f:case value="wide"></f:case>
-                        <f:defaultCase>md:w-1/12</f:defaultCase>
+                        <f:defaultCase>px-1 lg:px-2 md:w-1/12</f:defaultCase>
                     </f:switch>
                 </t3ce:format.makeSingleline>
             </f:variable>
@@ -79,7 +89,7 @@
             <f:variable name="contentWidth">
                 <f:if condition="{data.tx_container_parent} == 0">
                     <f:then>
-                        w-full
+                        px-1 lg:px-2 w-full
                         <f:switch expression="{data.frame_class}">
                             <f:case value="small-left">md:w-8/12</f:case>
                             <f:case value="small-center">md:w-8/12</f:case>
@@ -100,31 +110,34 @@
                 id="c{data.uid}"
                 class="{ceClasses} anchor">
                 <div{f:if(condition:'{data.tx_container_parent} == 0', then: ' class="{contentContainer}"')}>
-                <f:if condition="{data.tx_container_parent} == 0 && {offset}">
-                    <div class="{offset}"></div>
-                </f:if>
-                <div class="{contentWidth} ce-{data.CType}">
-                    <f:if condition="{data._LOCALIZED_UID}">
-                        <a id="c{data._LOCALIZED_UID}"></a>
-                    </f:if>
-                    <f:if condition="{data.CType} != 't3ce-accordion-container'">
-                        <f:render section="Before" optional="true">
-                            <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+                    <div{f:if(condition:'{data.tx_container_parent} == 0', then: ' class="flex flex-row justify-start -mx-1 lg:-mx-2"')}>
+                        <f:if condition="{data.tx_container_parent} == 0 && {offset}">
+                            <div class="{offset}"></div>
+                        </f:if>
+                        <div class="{contentWidth} ce-{data.CType}">
+                        <f:if condition="{data._LOCALIZED_UID}">
+                            <a id="c{data._LOCALIZED_UID}"></a>
+                        </f:if>
+                        <f:if condition="{data.CType} != 't3ce-accordion-container'">
+                            <f:render section="Before" optional="true">
+                                <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+                            </f:render>
+                            <f:render section="Header" optional="true">
+                                <f:render partial="Header/All" arguments="{_all}"/>
+                            </f:render>
+                        </f:if>
+                        <f:render section="Main" optional="true"/>
+                        <f:render section="Footer" optional="true">
+                            <f:render partial="Footer/All" arguments="{_all}"/>
                         </f:render>
-                        <f:render section="Header" optional="true">
-                            <f:render partial="Header/All" arguments="{_all}"/>
+                        <f:render section="After" optional="true">
+                            <f:render partial="DropIn/After/All" arguments="{_all}"/>
                         </f:render>
-                    </f:if>
-                    <f:render section="Main" optional="true"/>
-                    <f:render section="Footer" optional="true">
-                        <f:render partial="Footer/All" arguments="{_all}"/>
-                    </f:render>
-                    <f:render section="After" optional="true">
-                        <f:render partial="DropIn/After/All" arguments="{_all}"/>
-                    </f:render>
+                    </div>
+                    </div>
                 </div>
             </div>
-            </div>
+
 
         </f:then>
         <f:else>

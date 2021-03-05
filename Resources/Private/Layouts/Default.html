@@ -4,7 +4,10 @@
     data-namespace-typo3-fluid="true">
 
 <f:comment>
-    <!-- This layout create a flexbox grid with gutters. -->
+    <!--
+    This layout create a flexbox grid with gutters.
+     See: https://v1.tailwindcss.com/components/flexbox-grids#app
+     -->
     <div id="c-24" class="mt-0 mb-0 pt-8 pb-8">
         <div class="px-2 mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 xl:px-8">
             <div class="flex flex-row justify-start -mx-1 lg:-mx-2">
@@ -103,7 +106,7 @@
 
             <f:comment><!-- MAKE CLASSES SPACELESS --></f:comment>
             <f:variable name="ceClasses">
-                <t3ce:format.makeSingleline>{marginTop}{marginBottom}{paddingBottom}{paddingTop}{backgroundColor}</t3ce:format.makeSingleline>
+                <t3ce:format.makeSingleline>relative overflow-hidden {marginTop}{marginBottom}{paddingBottom}{paddingTop}{backgroundColor}</t3ce:format.makeSingleline>
             </f:variable>
 
             <div
@@ -118,7 +121,7 @@
                         <f:if condition="{data._LOCALIZED_UID}">
                             <a id="c{data._LOCALIZED_UID}"></a>
                         </f:if>
-                        <f:if condition="{data.CType} != 't3ce-accordion-container'">
+                        <f:if condition="{data.CType} != 't3ce-accordion-container' && {data.CType} != 'page_hero'">
                             <f:render section="Before" optional="true">
                                 <f:render partial="DropIn/Before/All" arguments="{_all}"/>
                             </f:render>

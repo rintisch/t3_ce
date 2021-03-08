@@ -29,27 +29,27 @@ TCEFORM {
       }
     }
 
-    # for purgeCSS: mt-4 mt-8 mt-16 mt-32 mt-64 mt-128
+    # for purgeCSS: pt-0 pt-4 pt-8 pt-16 pt-32 pt-64
     space_before_class {
       removeItems = extra-small, small, medium, large, extra-large
+      addItems.0 = 0
       addItems.4 = XS
       addItems.8 = S
-      addItems.16 = M
+      addItems.16 = M (=Standard)
       addItems.32 = L
       addItems.64 = XL
-      addItems.128 = XXL
       disableNoMatchingValueElement = 1
     }
 
-    # for purgeCSS: mb-4 mb-8 mb-16 mb-32 mb-64 mb-128
+    # for purgeCSS: pb-0 pb-4 pb-8 pb-16 pb-32 pb-64
     space_after_class {
       removeItems = extra-small, small, medium, large, extra-large
+      addItems.0 = 0
       addItems.4 = XS
       addItems.8 = S
-      addItems.16 = M
+      addItems.16 = M (=Standard)
       addItems.32 = L
       addItems.64 = XL
-      addItems.128 = XXL
       disableNoMatchingValueElement = 1
     }
 

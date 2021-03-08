@@ -36,49 +36,6 @@ $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
     'l10n_mode' => 'exclude',
 ];
 
-# for purgeCSS: pt-2 pt-4 pt-8 pt-16 pt-32
-$GLOBALS['TCA']['tt_content']['columns']['padding_top'] = [
-    'exclude' => true,
-    'displayCond' => 'FIELD:frame_class:!=:none',
-    'label' => $ll . 'field.padding_top',
-    'config' => [
-        'type' => 'select',
-        'renderType' => 'selectSingle',
-        'items' => [
-            ['Standard', ''],
-            ['0', '0'],
-            ['XS', '2'],
-            ['S', '4'],
-            ['M', '8'],
-            ['L', '16'],
-            ['XL', '32'],
-        ]
-    ],
-    'l10n_mode' => 'exclude',
-];
-
-# for purgeCSS: pb-2 pb-4 pb-8 pb-16 pb-32
-$GLOBALS['TCA']['tt_content']['columns']['padding_bottom'] = [
-    'exclude' => true,
-    'displayCond' => 'FIELD:frame_class:!=:none',
-    'label' => $ll . 'field.padding_bottom',
-    'config' => [
-        'type' => 'select',
-        'renderType' => 'selectSingle',
-        'items' => [
-            ['Standard', ''],
-            ['0', '0'],
-            ['XS', '2'],
-            ['S', '4'],
-            ['M', '8'],
-            ['L', '16'],
-            ['XL', '32'],
-        ]
-    ],
-    'l10n_mode' => 'exclude',
-];
-
-
 $GLOBALS['TCA']['tt_content']['columns']['header_label'] = [
     'exclude' => true,
     'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.header_label',

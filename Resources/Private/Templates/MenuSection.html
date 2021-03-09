@@ -5,13 +5,13 @@
     <f:if condition="{menu}">
         <ul class="w-full">
             <f:for each="{menu}" as="page">
-                <li>
+                <li class="w-full">
                     <f:if condition="{page.content}">
                         <ul class="flex flex-col md:flex-row font-sans flex-wrap">
                             <f:for each="{page.content}" as="element" iteration="iterator">
                                 <f:if condition="{element.data.header}">
-                                <li class="pb-2 {f:if(condition:'!{iterator.isLast}', then: ' md:pr-4 md:pb-3')}">
-                                    <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}" class="btn btn-outline btn-shallow">
+                                <li class="pb-2 {f:if(condition:'!{iterator.isLast}', then: ' md:pr-3 md:pb-3')}">
+                                    <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}" class="btn btn-shallow bg-white hover:bg-primary-300 text-gray-700 shadow ">
                                         <span>{element.data.header}</span>
                                     </a>
                                 </li>

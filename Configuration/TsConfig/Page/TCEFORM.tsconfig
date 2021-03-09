@@ -2,8 +2,27 @@
 # TCEFORM
 #
 TCEFORM {
-  tt_content {
+  pages {
     layout {
+      removeItems = 1,2,3
+    }
+  }
+
+  tt_content {
+
+    header_layout {
+      altLabels {
+        1 = H1
+        2 = H2
+        3 = H3
+        4 = H4
+        5 = H5
+      }
+    }
+
+    layout {
+      removeItems = 1,2,3
+      disableNoMatchingValueElement = 1
 
       types {
         t3ce-2cols-container {
@@ -27,6 +46,26 @@ TCEFORM {
           }
         }
       }
+    }
+
+    imageborder {
+      disabled = 1
+    }
+
+    bullets_type {
+      removeItems = 2
+    }
+
+    imagewidth {
+      disabled = 1
+    }
+
+    imageheight {
+      disabled = 1
+    }
+
+    imagecols {
+      removeItems = 5,6,7,8
     }
 
     # for purgeCSS: pt-0 pt-4 pt-8 pt-16 pt-32 pt-64

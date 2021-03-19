@@ -45,12 +45,12 @@
     <f:variable name="separatorLine">pb-8 border-b mb-8 md:pb-0 md:pr-12 md:mr-12 md:border-b-0 md:border-r</f:variable>
 
     <div class="flex flex-col md:flex-row grid grid-cols-1 {gridColumns}">
-        <div class="{containerOne}{f:if(condition:'{data.frame_class} == separator', then: ' {separatorLine}')}">
+        <div class="{containerOne} px-1 lg:px-2{f:if(condition:'{data.frame_class} == separator', then: ' {separatorLine}')}">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{containerTwo}">
+        <div class="{containerTwo} px-1 lg:px-2">
             <f:for each="{children2of2}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

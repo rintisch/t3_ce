@@ -9,7 +9,7 @@
      See: https://v1.tailwindcss.com/components/flexbox-grids#app
      -->
     <div id="c-24" class="relative overflow-hidden pt-8 pb-8">
-        <div class="mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 xl:px-8">
+        <div class="container">
             <div class="flex flex-row justify-start -mx-1 lg:-mx-2">
                 <div class="px-1 lg:px-2 w-0 md:w-1/12"></div>
                 // This is just an offset and optional depending on `frame_class`
@@ -49,14 +49,6 @@
                         <f:defaultCase>{data.background_color_class}</f:defaultCase>
                     </f:switch>
                 </f:if>
-
-            </f:variable>
-
-            <f:comment><!-- LAYOUT --></f:comment>
-            <f:variable name="contentContainer">
-                <t3ce:format.makeSingleline>
-                    mx-auto px-4 xl:px-8 max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl
-                </t3ce:format.makeSingleline>
             </f:variable>
 
             <f:comment><!-- FLEXBOX GRID → OFFSET --></f:comment>
@@ -91,7 +83,7 @@
             <div
                 id="c{data.uid}"
                 class="{t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor} anchor relative overflow-hidden')}">
-                <div class="{f:if(condition:'{data.tx_container_parent} == 0', then: '{contentContainer}')}">
+                <div class="{f:if(condition:'{data.tx_container_parent} == 0', then: 'container')}">
                     <div class="{f:if(condition:'{data.tx_container_parent} == 0', then: 'flex flex-row justify-start -mx-1 lg:-mx-2')}">
                         <f:if condition="{data.tx_container_parent} == 0 && {offset}">
                             <div class="{offset}"></div>

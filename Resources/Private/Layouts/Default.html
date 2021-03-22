@@ -92,13 +92,15 @@
                             <f:if condition="{data._LOCALIZED_UID}">
                                 <a id="c{data._LOCALIZED_UID}"></a>
                             </f:if>
-                            <f:if condition="{data.CType} != 't3ce-accordion-container' && {data.CType} != 'page_hero'">
-                                <f:render section="Before" optional="true">
-                                    <f:render partial="DropIn/Before/All" arguments="{_all}"/>
-                                </f:render>
-                                <f:render section="Header" optional="true">
-                                    <f:render partial="Header/All" arguments="{_all}"/>
-                                </f:render>
+                            <f:if condition="{data.CType} != 't3ce-accordion-container' && {data.CType} != 'page_hero' && !({data.CType} == 'header' && {data.latyout} != 10)">
+                                <div {f:if(condition:'{data.header_layout} != 100 && {data.header}', then:' class="mb-4"')}>
+                                    <f:render section="Before" optional="true">
+                                        <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+                                    </f:render>
+                                    <f:render section="Header" optional="true">
+                                        <f:render partial="Header/All" arguments="{_all}"/>
+                                    </f:render>
+                                </div>
                             </f:if>
                             <f:render section="Main" optional="true"/>
                             <f:render section="Footer" optional="true">

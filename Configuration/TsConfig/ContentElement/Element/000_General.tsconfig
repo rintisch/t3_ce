@@ -1,0 +1,80 @@
+#
+# TCEFORM FOR CONTENT ELEMENTS: General settings
+#
+TCEFORM {
+  tt_content {
+
+    header_layout {
+      altLabels {
+        1 = H1
+        2 = H2
+        3 = H3
+        4 = H4
+        5 = H5
+      }
+    }
+
+    layout {
+      removeItems = 1,2,3
+      disableNoMatchingValueElement = 1
+    }
+
+    imageborder {
+      disabled = 1
+    }
+
+    bullets_type {
+      removeItems = 2
+    }
+
+    imagewidth {
+      disabled = 1
+    }
+
+    imageheight {
+      disabled = 1
+    }
+
+    imagecols {
+      removeItems = 5,6,7,8
+    }
+
+    # for purgeCSS: pt-0 pt-4 pt-8 pt-16 pt-32 pt-64
+    space_before_class {
+      removeItems = extra-small, small, medium, large, extra-large
+      addItems.0 = 0
+      addItems.4 = XS
+      addItems.8 = S
+      addItems.16 = M (=Standard)
+      addItems.32 = L
+      addItems.64 = XL
+      disableNoMatchingValueElement = 1
+    }
+
+    # for purgeCSS: pb-0 pb-4 pb-8 pb-16 pb-32 pb-64
+    space_after_class {
+      removeItems = extra-small, small, medium, large, extra-large
+      addItems.0 = 0
+      addItems.4 = XS
+      addItems.8 = S
+      addItems.16 = M (=Standard)
+      addItems.32 = L
+      addItems.64 = XL
+      disableNoMatchingValueElement = 1
+    }
+
+    frame_class {
+      removeItems = ruler-before, ruler-after, indent-left, indent-right, indent
+      addItems {
+        small-center = Schmal zentriert
+        small-left = Schmal linksbündig
+        wide = Überbreit
+      }
+    }
+
+    # Remove unused fields from accordions
+    header_layout.types.t3ce-accordion-container.disabled = 1
+    header_link.types.t3ce-accordion-container.disabled = 1
+    subheader.types.t3ce-accordion-container.disabled = 1
+  }
+}

@@ -1,3 +1,16 @@
+#
+# TCEFORM FOR CONTENT ELEMENT: Container2Columns
+#
+
+TCEFORM.tt_content.layout.types {
+  page_hero {
+    addItems {
+      10 = Mit Bild
+    }
+  }
+}
+
+
 ####################################
 #### NEW CONTENT ELEMENT WIZARD ####
 ####################################

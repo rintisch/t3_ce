@@ -115,6 +115,7 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-accordion-container']['showitem'] =
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
         --palette--;;general,
         --palette--;;headers,
+        bodytext,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
         --palette--;;frames,
         --palette--;;appearanceLinks,
@@ -129,4 +130,5 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-accordion-container']['showitem'] =
         rowDescription,
 ';
 
+$GLOBALS['TCA']['tt_content']['types']['t3ce-accordion-container']['columnsOverrides']['bodytext']['config']['enableRichtext'] = 1;
 

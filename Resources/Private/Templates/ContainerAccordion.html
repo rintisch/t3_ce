@@ -30,6 +30,11 @@
         <f:comment><!-- Content of Accordion--></f:comment>
         <div class="js-accordion-content overflow-hidden transition-all duration-300">
             <div class="pl-6 pr-6 md:pl-12 lg:pl-16 md:pr-12 pb-6 md:pb-12 transition">
+                <f:if condition="{data.bodytext}">
+                    <div class="ce-text">
+                        {data.bodytext -> f:format.html()}
+                    </div>
+                </f:if>
                 <f:for each="{children1of1}" as="element">
                     {element.renderedContent -> f:format.raw()}
                 </f:for>

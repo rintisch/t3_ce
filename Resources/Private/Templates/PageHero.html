@@ -13,9 +13,9 @@
                 arguments="{file: images.0, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg md:rounded-bl-none lg:rounded-bl-lg lg:rounded-br-lg overflow-hidden'}"/>
         </f:if>
             <div class="">
-                <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4">
+                <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4 shadow">
                     <f:if condition="{data.header}">
-                        <h1 class="text-gray-800 font-medium text-6xl">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
+                        <h1 class="text-gray-800 font-medium text-3xl sm:text-4xl lg:text-6xl">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
                     </f:if>
 
                     <f:if condition="{data.subheader}">
@@ -23,7 +23,7 @@
                     </f:if>
 
                     <f:if condition="{data.header_link}">
-                        <f:link.typolink parameter="{data.header_link}" class="btn btn-outline-primary">
+                        <f:link.typolink parameter="{data.header_link}" class="mt-8 btn btn-outline-primary">
                             {data.readmore_label -> f:format.htmlentities()}
                         </f:link.typolink>
                     </f:if>

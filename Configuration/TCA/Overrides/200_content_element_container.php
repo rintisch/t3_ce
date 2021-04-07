@@ -1,7 +1,9 @@
 <?php
 ## Add 2 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
     't3ce-2cols-container',
     '2 Column Container',
     'Container for 2 columns',
@@ -10,8 +12,10 @@
             ['name' => 'left', 'colPos' => 201],
             ['name' => 'right', 'colPos' => 202],
         ]
-    ],
-    'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-2col.svg'
+    ]
+    )
+    )
+    ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-2col.svg')
 );
 $GLOBALS['TCA']['tt_content']['types']['t3ce-2cols-container']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -33,18 +37,21 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-2cols-container']['showitem'] = '
 
 ## Add 3 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-    't3ce-3cols-container',
-    '3 Column Container',
-    'Container for 3 columns',
-    [
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
+        't3ce-3cols-container',
+        '3 Column Container',
+        'Container for 3 columns',
         [
-            ['name' => 'left', 'colPos' => 201],
-            ['name' => 'middle', 'colPos' => 202],
-            ['name' => 'right', 'colPos' => 203],
+            [
+                ['name' => 'left', 'colPos' => 201],
+                ['name' => 'middle', 'colPos' => 202],
+                ['name' => 'right', 'colPos' => 203],
+            ]
         ]
-    ],
-    'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-3col.svg'
+    ))
+        ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-3col.svg')
 );
 $GLOBALS['TCA']['tt_content']['types']['t3ce-3cols-container']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -66,19 +73,23 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-3cols-container']['showitem'] = '
 
 ## Add 4 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
-    't3ce-4cols-container',
-    '4 Column Container',
-    'Container for 4 columns',
-    [
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
+        't3ce-4cols-container',
+        '4 Column Container',
+        'Container for 4 columns',
         [
-            ['name' => 'ltr:1/4', 'colPos' => 201],
-            ['name' => 'ltr:2/4', 'colPos' => 202],
-            ['name' => 'ltr:3/4', 'colPos' => 203],
-            ['name' => 'ltr:4/4', 'colPos' => 204]
+            [
+                ['name' => 'ltr:1/4', 'colPos' => 201],
+                ['name' => 'ltr:2/4', 'colPos' => 202],
+                ['name' => 'ltr:3/4', 'colPos' => 203],
+                ['name' => 'ltr:4/4', 'colPos' => 204]
+            ]
         ]
-    ],
-    'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-4col.svg'
+    )
+    )
+        ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-4col.svg')
 );
 $GLOBALS['TCA']['tt_content']['types']['t3ce-4cols-container']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -100,7 +111,9 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-4cols-container']['showitem'] = '
 
 ## Add 1col accordion container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->addContainer(
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
     't3ce-accordion-container',
     'Accordion Container',
     'Container to create an accordion',
@@ -108,8 +121,12 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-4cols-container']['showitem'] = '
         [
             ['name' => 'childs', 'colPos' => 201]
         ]
-    ],
-    'EXT:t3_ce/Resources/Public/Icons/ContentElements/container-accordion.svg'
+    ]
+    )
+    )
+    ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-accordion.svg')
+    ->setSaveAndCloseInNewContentElementWizard(false)
+    ->setBackendTemplate('EXT:t3_ce/Resources/Private/Templates/Backend/AccordionContainer.html')
 );
 $GLOBALS['TCA']['tt_content']['types']['t3ce-accordion-container']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,

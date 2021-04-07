@@ -1,0 +1,12 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:container="http://typo3.org/ns/B13/Container/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:if condition="{bodytext}">
+    <f:format.htmlentitiesDecode>{bodytext}</f:format.htmlentitiesDecode>
+</f:if>
+
+<f:format.raw>{tx_container_grid}</f:format.raw>
+
+</html>

@@ -22,11 +22,10 @@
                         <p class="text-gray-600 font-sans font-light mt-3 tracking-wide">{data.subheader}</p>
                     </f:if>
 
-                    <f:if condition="{data.header_link}">
-                        <f:link.typolink parameter="{data.header_link}" class="mt-8 btn btn-outline-primary">
-                            {data.readmore_label -> f:format.htmlentities()}
-                        </f:link.typolink>
+                    <f:if condition="{data.bodytext}">
+                        <f:format.html>{data.bodytext}</f:format.html>
                     </f:if>
+
                 </div>
             </div>
     </section>

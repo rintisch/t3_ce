@@ -40,20 +40,11 @@
 			<trans-unit id="field.background_image_options">
 				<source>Background Image Options</source>
 			</trans-unit>
-			<trans-unit id="field.readmore_label">
-				<source>Read More Label</source>
-			</trans-unit>
 			<trans-unit id="field.header_label">
 				<source>Header Label</source>
 			</trans-unit>
 			<trans-unit id="field.background_color_class">
 				<source>Background Color</source>
-			</trans-unit>
-			<trans-unit id="field.padding_top">
-				<source>Padding top</source>
-			</trans-unit>
-			<trans-unit id="field.padding_bottom">
-				<source>Padding bottom</source>
 			</trans-unit>
 
 			<trans-unit id="tabs.background">

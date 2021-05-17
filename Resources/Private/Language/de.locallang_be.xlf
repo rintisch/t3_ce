@@ -40,11 +40,6 @@
 				<target>Hintergrund Bild mit darüberliegendem Text als erstes Element auf der Seite.</target>
 			</trans-unit>
 
-
-			<trans-unit id="field.readmore_label">
-				<source>Read More Label</source>
-				<target>„Mehr lesen“-Label</target>
-			</trans-unit>
 			<trans-unit id="field.header_label">
 				<source>Header Label</source>
 				<target>Label für Überschrift</target>
@@ -52,14 +47,6 @@
 			<trans-unit id="field.background_color_class">
 				<source>Background Color</source>
 				<target>Hintergrundfarbe</target>
-			</trans-unit>
-			<trans-unit id="field.padding_top">
-				<source>Padding top</source>
-				<target>Innerer Abstand Oben</target>
-			</trans-unit>
-			<trans-unit id="field.padding_bottom">
-				<source>Padding bottom</source>
-				<target>Innerer Abstand Unten</target>
 			</trans-unit>
 
 			<trans-unit id="tabs.background">

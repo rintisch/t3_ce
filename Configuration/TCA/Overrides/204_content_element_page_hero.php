@@ -51,7 +51,6 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['page_hero'])) {
  */
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['page_hero'] = 'content-t3ce-page-hero';
 
-
 /***************
  * Form configuration for edit form
  */
@@ -59,6 +58,7 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero']['showitem'] = '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     --palette--;;headers,
+                    bodytext,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
                     image,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
@@ -79,42 +79,35 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero']['showitem'] = '
 /***************
  * Configure element type
  */
-$additionalColumns = [
-    'readmore_label' => [
-        'exclude' => true,
-        'label' => 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:field.readmore_label',
-        'config' => [
-            'type' => 'input',
-            'eval' => 'trim',
-            'size' => 50,
-            'max' => 255
-        ]
-    ],
-];
 
 $GLOBALS['TCA']['tt_content']['types']['page_hero'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['page_hero'],
     [
-    'columnsOverrides' => [
-        'header' => [
-            'config' => [
-                'enableRichtext' => true,
-                'cols' => 30,
-                'rows' => 1,
-                'type' => 'text',
+        'columnsOverrides' => [
+            'header' => [
+                'config' => [
+                    'enableRichtext' => true,
+                    'cols' => 30,
+                    'rows' => 1,
+                    'type' => 'text',
+                ]
             ]
         ]
     ]
-]);
+);
 
-/***************
- * Add fields to default palettes
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-    'tt_content',
-    'readmore_label',
-    'page_hero',
-    'after:subheader'
+$GLOBALS['TCA']['tt_content']['types']['page_hero'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['page_hero'],
+    [
+        'columnsOverrides' => [
+            'bodytext' => [
+                'config' => [
+                    'enableRichtext' => true,
+                    'cols' => 30,
+                    'rows' => 1,
+                    'type' => 'text',
+                ]
+            ]
+        ]
+    ]
 );

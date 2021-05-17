@@ -3,6 +3,5 @@
 CREATE TABLE tt_content
 (
     background_color_class varchar(255) DEFAULT '' NOT NULL,
-    readmore_label         varchar(255) DEFAULT '' NOT NULL,
     header_label           varchar(255) DEFAULT '' NOT NULL,
 );

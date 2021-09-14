@@ -44,7 +44,7 @@
 
     <f:variable name="separatorLine">pb-8 border-b mb-8 md:pb-0 md:pr-12 md:mr-12 md:border-b-0 md:border-r</f:variable>
 
-    <div class="flex flex-col md:flex-row grid grid-cols-1 {gridColumns} -mx-4 lg:-mx-8">
+    <div class="flex flex-col md:flex-row grid grid-cols-1 {gridColumns} -mx-2 lg:-mx-4">
         <div class="{containerOne} px-4 lg:px-4{f:if(condition:'{data.frame_class} == separator', then: ' {separatorLine}')}">
             <f:for each="{children1of2}" as="element">
                 {element.renderedContent -> f:format.raw()}

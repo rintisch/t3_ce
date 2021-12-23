@@ -9,11 +9,6 @@
 
 defined('TYPO3_MODE') || die();
 
-use JosefGlatz\CropVariantsBuilder\Builder;
-use JosefGlatz\CropVariantsBuilder\CropVariant;
-use JosefGlatz\CropVariantsBuilder\Defaults\AspectRatio;
-use JosefGlatz\CropVariantsBuilder\Defaults\CropArea;
-
 /***************
  * Form configuration for edit form
  */
@@ -39,37 +34,70 @@ $GLOBALS['TCA']['tt_content']['types']['header']['showitem'] = '
 
 
 /***************
- * Image cropping for content element "Page Hero"
+ * Image cropping for content element "Header"
  */
-call_user_func(
-    static function ($table, $field, $cType) {
-
-        /**
-         * Set cropVariants configuration with EXT:cropvariantsbuilder
-         */
-        Builder::getInstance($table, $field, $cType)
-            ->disableDefaultCropVariants()
-            ->addCropVariant(
-                CropVariant::create('sm')
-                    ->addAllowedAspectRatios(AspectRatio::get(['3:2']))
-                    ->setCropArea(CropArea::get())
-                    ->get()
-            )
-            ->addCropVariant(
-                CropVariant::create('md')
-                    ->addAllowedAspectRatios(AspectRatio::get(['2:1']))
-                    ->setCropArea(CropArea::get())
-                    ->get()
-            )
-            ->addCropVariant(
-                CropVariant::create('lg')
-                    ->addAllowedAspectRatios(AspectRatio::get(['3:1']))
-                    ->setCropArea(CropArea::get())
-                    ->get()
-            )
-            ->persistToTca();
-    },
-    'tt_content',
-    'image',
-    'header'
-);
+$GLOBALS['TCA']['tt_content']['types']['header']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+    'default' => [
+        'disabled' => true,
+    ],
+    'sm' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang.xlf:crop_variants.sm.label',
+        'cropArea' => [
+            'x' => 0.0,
+            'y' => 0.0,
+            'width' => 1.0,
+            'height' => 1.0,
+        ],
+        'focusArea' => [
+        ],
+        'coverAreas' => [
+        ],
+        'allowedAspectRatios' => [
+            '3:2' => [
+                'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.3_2',
+                'value' => 1.5,
+            ],
+        ],
+        'selectedRatio' => '',
+    ],
+    'md' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang.xlf:crop_variants.md.label',
+        'cropArea' => [
+            'x' => 0.0,
+            'y' => 0.0,
+            'width' => 1.0,
+            'height' => 1.0,
+        ],
+        'focusArea' => [
+        ],
+        'coverAreas' => [
+        ],
+        'allowedAspectRatios' => [
+            '2:1' => [
+                'title' => '2:1',
+                'value' => 2.0,
+            ],
+        ],
+        'selectedRatio' => '',
+    ],
+    'lg' => [
+        'title' => 'LLL:EXT:picture_extend/Resources/Private/Language/locallang.xlf:crop_variants.lg.label',
+        'cropArea' => [
+            'x' => 0.0,
+            'y' => 0.0,
+            'width' => 1.0,
+            'height' => 1.0,
+        ],
+        'focusArea' => [
+        ],
+        'coverAreas' => [
+        ],
+        'allowedAspectRatios' => [
+            '3:1' => [
+                'title' => '3:1',
+                'value' => 3.0,
+            ],
+        ],
+        'selectedRatio' => '',
+    ],
+];

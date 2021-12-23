@@ -9,10 +9,10 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-10.4.99',
-            'fluid_styled_content' => '9.5.0-10.4.99',
-            'rte_ckeditor' => '9.5.0-10.4.99',
-            'container' => '1.1.1 - 1.99'
+            'typo3' => '9.5.0-11.5.99',
+            'fluid_styled_content' => '9.5.0-11.5.99',
+            'rte_ckeditor' => '9.5.0-11.5.99',
+            'container' => '1.4 - 1.99'
         ],
         'conflicts' => [
         ],
@@ -29,5 +29,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Gerald Rintisch',
     'author_email' => 'gerald.rintisch@posteo.de',
     'author_company' => 'Rintisch',
-    'version' => '1.0.4',
+    'version' => '1.0.5',
 ];

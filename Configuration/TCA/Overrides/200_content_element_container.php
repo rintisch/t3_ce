@@ -4,18 +4,18 @@
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
     new \B13\Container\Tca\ContainerConfiguration(
-    't3ce-2cols-container',
-    '2 Column Container',
-    'Container for 2 columns',
-    [
+        't3ce-2cols-container',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.2_col_container',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.2_col_container.description',
         [
-            ['name' => 'left', 'colPos' => 201],
-            ['name' => 'right', 'colPos' => 202],
+            [
+                ['name' => 'left', 'colPos' => 201],
+                ['name' => 'right', 'colPos' => 202],
+            ]
         ]
-    ]
     )
     )
-    ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-2col.svg')
+        ->setIcon('EXT:t3_ce/Resources/Public/Icons/ContentElements/container-2col.svg')
 );
 $GLOBALS['TCA']['tt_content']['types']['t3ce-2cols-container']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -41,8 +41,8 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-2cols-container']['showitem'] = '
     (
     new \B13\Container\Tca\ContainerConfiguration(
         't3ce-3cols-container',
-        '3 Column Container',
-        'Container for 3 columns',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.3_col_container',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.3_col_container.description',
         [
             [
                 ['name' => 'left', 'colPos' => 201],
@@ -77,8 +77,8 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-3cols-container']['showitem'] = '
     (
     new \B13\Container\Tca\ContainerConfiguration(
         't3ce-4cols-container',
-        '4 Column Container',
-        'Container for 4 columns',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.4_col_container',
+        'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.4_col_container.description',
         [
             [
                 ['name' => 'ltr:1/4', 'colPos' => 201],

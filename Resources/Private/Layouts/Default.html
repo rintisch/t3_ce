@@ -3,112 +3,55 @@
     xmlns:t3ce="http://typo3.org/ns/Rintisch/T3Ce/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
-<f:comment>
-    <!--
-    This layout create a flexbox grid with gutters.
-     See: https://v1.tailwindcss.com/components/flexbox-grids#app
-     -->
-    <div id="c-24" class="relative overflow-hidden pt-8 pb-8">
-        <div class="container">
-            <div class="flex flex-row justify-start -mx-1 lg:-mx-2">
-                <div class="px-1 lg:px-2 w-0 md:w-1/12"></div>
-                // This is just an offset and optional depending on `frame_class`
-                <div class="px-1 lg:px-2 w-full md:w-10/12 ce-text">HERE IS THE REAL CONTENT</div>
-            </div>
-        </div>
-    </div>
-</f:comment>
 <f:spaceless>
     <f:if condition="{data.frame_class} != none">
         <f:then>
-            <f:comment><!-- PADDING TOP --></f:comment>
-            <f:variable name="paddingTop">
-                <f:if condition="{data.space_before_class} == ''">
-                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pt-16' , else: 'pt-0')}</f:then>
-                    <f:else>pt-{data.space_before_class}</f:else>
-                </f:if>
-            </f:variable>
-
-            <f:comment><!-- PADDING BOTTOM --></f:comment>
-            <f:variable name="paddingBottom">
-                <f:if condition="{data.space_after_class} == ''">
-                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pb-16' , else: 'pt-0')}</f:then>
-                    <f:else>pb-{data.space_after_class}</f:else>
-                </f:if>
-            </f:variable>
 
             <f:comment><!-- BACKGROUND COLOR --></f:comment>
             <f:variable name="backgroundColor">
-                <f:switch expression="{data.background_color_class}">
-                    <f:case value="none">
-                    </f:case>
-                    <f:case value="bg-primary-500">
-                        bg-primary-500 text-white tracking-wide
-                    </f:case>
-                    <f:defaultCase>{data.background_color_class}</f:defaultCase>
-                </f:switch>
+                {data.background_color_class}
             </f:variable>
 
             <f:comment><!-- FLEXBOX GRID → OFFSET --></f:comment>
             <f:variable name="offset">
-                <t3ce:format.makeSingleline>
-                    w-0
-                    <f:switch expression="{data.frame_class}">
-                        <f:case value="small-left">px-1 lg:px-2 md:w-1/12</f:case>
-                        <f:case value="small-center">px-1 lg:px-2 md:w-2/12</f:case>
-                        <f:case value="wide"></f:case>
-                        <f:defaultCase>px-1 lg:px-2 md:w-1/12</f:defaultCase>
-                    </f:switch>
-                </t3ce:format.makeSingleline>
+                <f:comment><!-- TODO !!!!!!!!!!!!!!!!! --></f:comment>
             </f:variable>
 
             <f:comment><!-- FLEXBOX GRID → CONTENT-WIDTH --></f:comment>
             <f:variable name="contentWidth">
                 <f:if condition="{data.tx_container_parent} == 0">
                     <f:then>
-                        px-1 lg:px-2 w-full
-                        <f:switch expression="{data.frame_class}">
-                            <f:case value="small-left">md:w-8/12</f:case>
-                            <f:case value="small-center">md:w-8/12</f:case>
-                            <f:case value="wide"></f:case>
-                            <f:defaultCase>md:w-10/12</f:defaultCase>
-                        </f:switch>
+                        {data.frame_class}
                     </f:then>
                     <f:else></f:else>
                 </f:if>
             </f:variable>
 
-            <div
-                id="c{data.uid}"
-                class="{t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor} anchor relative overflow-hidden')}">
-                <div class="{f:if(condition:'{data.tx_container_parent} == 0', then: 'container')}">
-                    <div class="{f:if(condition:'{data.tx_container_parent} == 0', then: 'flex flex-row justify-start -mx-1 lg:-mx-2')}">
-                        <f:if condition="{data.tx_container_parent} == 0 && {offset}">
-                            <div class="{offset}"></div>
-                        </f:if>
-                        <div class="{t3ce:format.makeSingleline(value: '{contentWidth} ce-{data.CType}')}">
-                            <f:if condition="{data._LOCALIZED_UID}">
-                                <a id="c{data._LOCALIZED_UID}"></a>
-                            </f:if>
-                            <f:if condition="{data.CType} != 'page_hero' && !({data.CType} == 'header' && {data.latyout} != 10)">
-                                <div {f:if(condition:'{data.header_layout} != 100 && {data.header}', then:' class="mb-4"')}>
-                                    <f:render section="Before" optional="true">
-                                        <f:render partial="DropIn/Before/All" arguments="{_all}"/>
-                                    </f:render>
-                                    <f:render section="Header" optional="true">
-                                        <f:render partial="Header/All" arguments="{_all}"/>
-                                    </f:render>
-                                </div>
-                            </f:if>
-                            <f:render section="Main" optional="true"/>
-                            <f:render section="Footer" optional="true">
-                                <f:render partial="Footer/All" arguments="{_all}"/>
+            <div id="c{data.uid}" class="{backgroundColor}">
+                <f:if condition="{data.tx_container_parent} == 0 && {offset}">
+                    <div class="{offset}"></div>
+                </f:if>
+                <div class="{t3ce:format.makeSingleline(value: '{contentWidth} ce-{data.CType}')}">
+                    <f:if condition="{data._LOCALIZED_UID}">
+                        <a id="c{data._LOCALIZED_UID}"></a>
+                    </f:if>
+                    <f:if condition="{data.CType} != 't3ce-accordion-container' && {data.CType} != 'page_hero' && !({data.CType} == 'header' && {data.layout} != 10)">
+                        <div>
+                            <f:render section="Before" optional="true">
+                                <f:render partial="DropIn/Before/All" arguments="{_all}"/>
                             </f:render>
-                            <f:render section="After" optional="true">
-                                <f:render partial="DropIn/After/All" arguments="{_all}"/>
+                            <f:render section="Header" optional="true">
+                                <f:render partial="Header/All" arguments="{_all}"/>
                             </f:render>
                         </div>
-                    </div>
+                    </f:if>
+                    <f:render section="Main" optional="true"/>
+                    <f:render section="Footer" optional="true">
+                        <f:render partial="Footer/All" arguments="{_all}"/>
+                    </f:render>
+                    <f:render section="After" optional="true">
+                        <f:render partial="DropIn/After/All" arguments="{_all}"/>
+                    </f:render>
                 </div>
             </div>
         </f:then>

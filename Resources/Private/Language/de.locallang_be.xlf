@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-01UTC10:07:040">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-06-01UTC10:07:040">
 		<header>
 			<authorName>Gerald Rintisch</authorName>
 			<authorEmail>gerald.rintisch@posteo.de</authorEmail>
@@ -16,13 +16,67 @@
 				<target>Einstellungen</target>
 			</trans-unit>
 
+			<trans-unit id="content_element.accordion">
+				<source>Accordion</source>
+				<target>Akkordeon</target>
+			</trans-unit>
+			<trans-unit id="content_element.accordion.description">
+				<source>A content element for fancy accordion magic</source>
+				<target>Ein ausklappbares Akkordeon</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.container_accordion">
+				<source>Accordion-Container</source>
+				<target>Akkordeon-Container</target>
+			</trans-unit>
+			<trans-unit id="content_element.container_accordion.description">
+				<source>Container to create an accordion</source>
+				<target>Container um ein Akkordeon zu erstellen.</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.2_col_container">
+				<source>2 Column Container</source>
+				<target>2-Spalten-Container</target>
+			</trans-unit>
+			<trans-unit id="content_element.2_col_container.description">
+				<source>Container for 2 columns</source>
+				<target>Container mit 2 Spalten</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.3_col_container">
+				<source>3 Column Container</source>
+				<target>3-Spalten-Container</target>
+			</trans-unit>
+			<trans-unit id="content_element.3_col_container.description">
+				<source>Container for 3 columns</source>
+				<target>Container mit 3 Spalten</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.4_col_container">
+				<source>4 Column Container</source>
+				<target>4-Spalten-Container</target>
+			</trans-unit>
+			<trans-unit id="content_element.4_col_container.description">
+				<source>Container for 4 columns</source>
+				<target>Container mit 4 Spalten</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.x_col_container.separator">
+				<source>Separator</source>
+				<target>Trennlinie</target>
+			</trans-unit>
+
 			<trans-unit id="content_element.page_hero">
 				<source>Page Hero</source>
 				<target>Page Hero</target>
 			</trans-unit>
 			<trans-unit id="content_element.page_hero.description">
 				<source>Background Image with text as first element on a page.</source>
-				<target>Hintergrund Bild mit darüberliegendem Text als erstes Element auf der Seite.</target>
+				<target>Hintergrundbild mit Text als oberstes Element auf einer Seite.</target>
+			</trans-unit>
+			<trans-unit id="content_element.page_hero.layout_image">
+				<source>With image</source>
+				<target>Mit Bild</target>
 			</trans-unit>
 
 			<trans-unit id="field.header_label">
@@ -32,11 +86,6 @@
 			<trans-unit id="field.background_color_class">
 				<source>Background Color</source>
 				<target>Hintergrundfarbe</target>
-			</trans-unit>
-
-			<trans-unit id="tabs.background">
-				<source>Background</source>
-				<target>Hintergrund</target>
 			</trans-unit>
 		</body>
 	</file>

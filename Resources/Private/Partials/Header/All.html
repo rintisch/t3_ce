@@ -3,14 +3,8 @@
 <f:if condition="{data.header_layout} != 100">
     <f:if condition="{data.header_label} || {data.header} || {data.subheader} || {data.date}">
         <header>
-            <f:variable name="labelColor">
-                <f:if condition="{data.background_color_class} == 'bg-primary-500'">
-                    <f:then>text-secondary-400</f:then>
-                    <f:else>text-secondary-700</f:else>
-                </f:if>
-            </f:variable>
             <f:render partial="Header/HeaderLabel" arguments="{
-                header_label: data.header_label, textColor: labelColor}" />
+                header_label: data.header_label}" />
             <f:render partial="Header/Header" arguments="{
                 header: data.header,
                 layout: data.header_layout,

@@ -16,13 +16,6 @@ $extensionKey = 't3_ce';
 
 
 /***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['accordion'])) {
-    $GLOBALS['TCA']['tt_content']['types']['accordion'] = [];
-}
-
-/***************
  * Add content element PageTSConfig
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(

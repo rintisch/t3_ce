@@ -17,13 +17,15 @@ TCEFORM.tt_content {
         50 = 1:3
         60 = 3:1
       }
+
+      removeItems = 1, 2, 3
     }
   }
 
   frame_class.types {
-    t3ce-2cols-container.addItems.separator = Trennlinie
-    t3ce-3cols-container.addItems.separator = Trennlinie
-    t3ce-4cols-container.addItems.separator = Trennlinie
+    t3ce-2cols-container.addItems.separator = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.x_col_container.separator
+    t3ce-3cols-container.addItems.separator = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.x_col_container.separator
+    t3ce-4cols-container.addItems.separator = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.x_col_container.separator
     t3ce-2cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none
     t3ce-3cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none
     t3ce-4cols-container.removeItems = ruler-before, ruler-after, indent-left, indent-right, indent, none

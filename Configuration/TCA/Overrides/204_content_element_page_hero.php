@@ -14,14 +14,6 @@ defined('TYPO3_MODE') || die();
  */
 $extensionKey = 't3_ce';
 
-
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['page_hero'])) {
-    $GLOBALS['TCA']['tt_content']['types']['page_hero'] = [];
-}
-
 /***************
  * Add content element PageTSConfig
  */

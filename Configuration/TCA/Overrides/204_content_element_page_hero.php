@@ -71,23 +71,6 @@ $GLOBALS['TCA']['tt_content']['types']['page_hero']['showitem'] = '
 /***************
  * Configure element type
  */
-
-$GLOBALS['TCA']['tt_content']['types']['page_hero'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['page_hero'],
-    [
-        'columnsOverrides' => [
-            'header' => [
-                'config' => [
-                    'enableRichtext' => true,
-                    'cols' => 30,
-                    'rows' => 1,
-                    'type' => 'text',
-                ]
-            ]
-        ]
-    ]
-);
-
 $GLOBALS['TCA']['tt_content']['types']['page_hero'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['page_hero'],
     [

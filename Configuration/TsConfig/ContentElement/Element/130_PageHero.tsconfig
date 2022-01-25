@@ -1,15 +1,14 @@
 #
-# TCEFORM FOR CONTENT ELEMENT: Container2Columns
+# TCEFORM FOR CONTENT ELEMENT: PageHero
 #
 
 TCEFORM.tt_content.layout.types {
   page_hero {
     addItems {
-      10 = Mit Bild
+      10 = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.page_hero.layout_image
     }
   }
 }
-
 
 ####################################
 #### NEW CONTENT ELEMENT WIZARD ####

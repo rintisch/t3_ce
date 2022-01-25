@@ -6,20 +6,20 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
-    <section class="hero grid -m-0.5 overflow-hidden items-center lg:container lg:mx-auto">
+    <section class="hero">
         <f:if condition="{images.0}">
             <f:render
                 partial="Media/Rendering/Image"
-                arguments="{file: images.0, settings: settings, pictureClass: 'fit-child lg:w-2/3 h-full justify-self-end transition rounded-bl-lg md:rounded-bl-none lg:rounded-bl-lg lg:rounded-br-lg overflow-hidden'}"/>
+                arguments="{file: images.0, settings: settings, pictureClass: ''}"/>
         </f:if>
             <div class="">
-                <div class="hero-content m-4 z-10 bg-white bg-opacity-75 rounded-md p-4 shadow">
+                <div class="hero-content">
                     <f:if condition="{data.header}">
-                        <h1 class="text-gray-800 font-medium text-3xl sm:text-4xl lg:text-6xl">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
+                        <h1 class="">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
                     </f:if>
 
                     <f:if condition="{data.subheader}">
-                        <p class="text-gray-600 font-sans font-light mt-3 tracking-wide">{data.subheader}</p>
+                        <p class="">{data.subheader}</p>
                     </f:if>
 
                     <f:if condition="{data.bodytext}">

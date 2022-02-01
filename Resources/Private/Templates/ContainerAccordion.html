@@ -1,0 +1,58 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Header">
+    <f:comment>Do not show header for this content element.</f:comment>
+</f:section>
+
+<f:section name="Main">
+    <div class="js-accordion mx-6 sm:mx-0 relative shadow hover:shadow-lg{f:if(condition: data.background_color_class, then: ' {data.background_color_class}')}">
+        <f:comment><!-- Header of Accordion--></f:comment>
+        <input class="absolute opacity-0" id="tab-single-{data.uid}" type="checkbox">
+        <label class="block cursor-pointer" for="tab-single-{data.uid}">
+            <div class="absolute left-0 top-0 mt-5 md:mt-2 -ml-5 md:-ml-8 bg-secondary-500">
+                <div class="w-10 h-10 md:w-16 md:h-16 flex items-center justify-center text-4xl md:text-6xl text-white font-sans relative">
+                    <div class="js-icon relative w-6 h-6"></div>
+                    <svg
+                        class="absolute top-full left-0 h-2 w-5 md:w-8 text-primary-500"
+                        fill="currentColor"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                        aria-hidden="true">
+                        <polygon points="0,0 100,0 100,100"/>
+                    </svg>
+                </div>
+            </div>
+
+            <header class="p-6 pl-8 md:pl-12 lg:pl-16">
+                <h3 class="leading-snug text-xl md:text-2xl text-gray-800 my-0">{data.header}</h3>
+            </header>
+        </label>
+
+        <f:comment><!-- Content of Accordion--></f:comment>
+        <div class="js-accordion-content overflow-hidden transition-all duration-300">
+            <div class="pl-6 pr-6 md:pl-12 lg:pl-16 md:pr-12 pb-6 md:pb-12 transition">
+                <f:if condition="{data.bodytext}">
+                    <div class="ce-text">
+                        {data.bodytext -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:for each="{children1of1}" as="element">
+                    {element.renderedContent -> f:format.raw()}
+                </f:for>
+            </div>
+        </div>
+
+        <svg
+            class="absolute top-full right-0 h-2 w-8 text-primary-500"
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true">
+            <polygon points="0,0 100,0 0,100"/>
+        </svg>
+    </div>
+</f:section>
+</html>

@@ -1,5 +1,18 @@
 # Changelog
 
+## Breaking Changes in v3.0.0
+
+### Drop container content elements
+All container content elements are deleted because
+the concept was simply bad. It is better to use IRRE
+for container with e.g. EXT:listelements.
+
+### Drop support for older TYPO3 versions
+Only TYPO3 v11 is supported any longer.
+
+### Update dependency to EXT:container
+Use latest version of EXT:container.
+
 ## Breaking Changes in v2.0.0
 
 ### TYPO3 v11 compatibility
@@ -28,6 +41,24 @@ Therefore this functionality was removed. You have to transfer this functionalit
 * `Configuration/TCA/Overrides/202_content_element_header.php`
 * `Configuration/TsConfig/ContentElement/Element/120_Header.tsconfig`
 * `Configuration/TypoScript/ContentElement/Header.typoscript`
+
+### Use proper functionality to hide header content elements `pageHero` and `accordionContainer`
+
+The behaviour that header sections are automatically not rendered
+in the content elements `pageHero` and `accordionContainer` is not given any longer.
+This was made by extra exluding these 2 elements in the `Layouts/Default.html`.
+
+Now the proper functionality is used, see [feature changelog 79622](https://docs.typo3.org/c/typo3/cms-core/main/en-us/Changelog/8.6/Feature-79622-NewDefaultLayoutForFluidStyledContent.html#feature-79622-new-default-layout-for-fluid-styled-content)
+
+Therefore both content elements now need in their templates something like
+
+```html
+<f:section name="Header">
+    <f:comment>Do not show header for this content element.</f:comment>
+</f:section>
+```
+
+To render the header label we now use also a `DropIn` which is also described in the feature chancelog.
 
 ### TCEFORM
 Following settings are not given any longer and might need to be set by yourself:

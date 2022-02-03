@@ -29,6 +29,24 @@ Therefore this functionality was removed. You have to transfer this functionalit
 * `Configuration/TsConfig/ContentElement/Element/120_Header.tsconfig`
 * `Configuration/TypoScript/ContentElement/Header.typoscript`
 
+### Use proper functionality to hide header content elements `pageHero` and `accordionContainer`
+
+The behaviour that header sections are automatically not rendered
+in the content elements `pageHero` and `accordionContainer` is not given any longer.
+This was made by extra exluding these 2 elements in the `Layouts/Default.html`.
+
+Now the proper functionality is used, see [feature changelog 79622](https://docs.typo3.org/c/typo3/cms-core/main/en-us/Changelog/8.6/Feature-79622-NewDefaultLayoutForFluidStyledContent.html#feature-79622-new-default-layout-for-fluid-styled-content)
+
+Therefore both content elements now need in their templates something like
+
+```html
+<f:section name="Header">
+    <f:comment>Do not show header for this content element.</f:comment>
+</f:section>
+```
+
+To render the header label we now use also a `DropIn` which is also described in the feature chancelog.
+
 ### TCEFORM
 Following settings are not given any longer and might need to be set by yourself:
 

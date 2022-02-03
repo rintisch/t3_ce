@@ -3,6 +3,10 @@
     data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 
+<f:section name="Header">
+    <f:comment>Do not show header for this content element.</f:comment>
+</f:section>
+
 <f:section name="Main">
     <div class="js-accordion mx-6 sm:mx-0 relative shadow hover:shadow-lg{f:if(condition: data.background_color_class, then: ' {data.background_color_class}')}">
         <f:comment><!-- Header of Accordion--></f:comment>

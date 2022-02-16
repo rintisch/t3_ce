@@ -20,14 +20,26 @@ Affected are the following files in the directory `Resources/Private`:
 * `Resources/Private/Partials/Bullets/Type-1.html`
 * `Resources/Private/Templates/*`
 
-### Remove content element header
+### Remove content element `header`
 
 The content element `header` got an additional field `image`.
-To add that function in this extension was not really focused on the real target of `t3_ce`: To add new content elements.
-Therefore this functionality was removed. You have to transfer this functionality to your own extension / sitePackage. The removed files are:
+
+To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
+Therefore this functionality was removed. You have to transfer this functionality to your own extension / sitePackage.
+
+The removed files are:
 * `Configuration/TCA/Overrides/202_content_element_header.php`
 * `Configuration/TsConfig/ContentElement/Element/120_Header.tsconfig`
 * `Configuration/TypoScript/ContentElement/Header.typoscript`
+
+### Remove content element `textpic`
+The template of the content element `textpic` was adapted.
+
+To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
+You have to transfer this functionality to your own extension / sitePackage.
+
+The removed files is:
+`/Resources/Private/Templates/Textpic.html`
 
 ### Use proper functionality to hide header content elements `pageHero` and `accordionContainer`
 

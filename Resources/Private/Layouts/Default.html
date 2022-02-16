@@ -38,27 +38,26 @@
                 </f:if>
             </f:variable>
 
-            <div id="c{data.uid}" class="{t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor}')}">
+            <div id="c{data.uid}" class="[ ce-{data.CType} ] {t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor}')}">
                 <f:comment><!-- use wrapper only in 1st-level CE, not in nested CE. --></f:comment>
-                <div class="{f:if(condition: '{data.tx_container_parent} == \'0\'', then: '[ wrapper{f:if(condition:\'{data.layout} == 1\', then: \' center\')} ]')}">
-                    <div class="[ stack ] ce-{data.CType}">
-                        <f:if condition="{data._LOCALIZED_UID}">
-                            <a id="c{data._LOCALIZED_UID}"></a>
-                        </f:if>
-                        <f:render section="Before" optional="true">
-                            <f:render partial="DropIn/Before/All" arguments="{_all}"/>
-                        </f:render>
-                        <f:render section="Header" optional="true">
-                            <f:render partial="Header/All" arguments="{_all}"/>
-                        </f:render>
-                        <f:render section="Main" optional="true"/>
-                        <f:render section="Footer" optional="true">
-                            <f:render partial="Footer/All" arguments="{_all}"/>
-                        </f:render>
-                        <f:render section="After" optional="true">
-                            <f:render partial="DropIn/After/All" arguments="{_all}"/>
-                        </f:render>
-                    </div>
+                <div class="[ stack {f:if(condition: '{data.tx_container_parent} == \'0\'', then: ' wrapper ]{f:if(condition:\'{data.layout} == 1\', then: \' [ center\')}')} ]">
+
+                    <f:if condition="{data._LOCALIZED_UID}">
+                        <a id="c{data._LOCALIZED_UID}"></a>
+                    </f:if>
+                    <f:render section="Before" optional="true">
+                        <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+                    </f:render>
+                    <f:render section="Header" optional="true">
+                        <f:render partial="Header/All" arguments="{_all}"/>
+                    </f:render>
+                    <f:render section="Main" optional="true"/>
+                    <f:render section="Footer" optional="true">
+                        <f:render partial="Footer/All" arguments="{_all}"/>
+                    </f:render>
+                    <f:render section="After" optional="true">
+                        <f:render partial="DropIn/After/All" arguments="{_all}"/>
+                    </f:render>
                 </div>
             </div>
         </f:then>

@@ -4,24 +4,23 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
-    <f:variable name="itemsClasses">width-1of4 px-1 lg:px-2</f:variable>
-    <div class="grid grid-cols-1 md:grid-cols-4">
-        <div class="{itemsClasses}">
+    <div class="[ col-container ]">
+        <div class="[ stack ]">
             <f:for each="{children1of4}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{itemsClasses}">
+        <div class="[ stack ]">
             <f:for each="{children2of4}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{itemsClasses}">
+        <div class="[ stack ]">
             <f:for each="{children3of4}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{itemsClasses}">
+        <div class="[ stack ]">
             <f:for each="{children4of4}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

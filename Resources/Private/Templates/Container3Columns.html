@@ -4,19 +4,18 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
-    <f:variable name="itemsClasses">width-1of3 px-1 lg:px-2</f:variable>
-    <div class="grid grid-cols-1 lg:grid-cols-3">
-        <div class="{itemsClasses}">
+    <div class="[ switcher ]">
+        <div class="[ stack ]">
             <f:for each="{children1of3}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{itemsClasses}">
+        <div class="[ stack ]">
             <f:for each="{children2of3}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>
         </div>
-        <div class="{itemsClasses}">
+        <div class="[ stack ]">
             <f:for each="{children3of3}" as="element">
                 {element.renderedContent -> f:format.raw()}
             </f:for>

@@ -38,7 +38,7 @@
                 </f:if>
             </f:variable>
 
-            <div id="c{data.uid}" class="[ ce-{data.CType} ] {t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor}')}">
+            <div id="c{data.uid}" class="[ ce-{data.CType}{f:if(condition:'{data.layout}', then:' layout-{data.layout}')} ] {t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor}')}">
                 <f:comment><!-- use wrapper only in 1st-level CE, not in nested CE. --></f:comment>
                 <div class="[ stack {f:if(condition: '{data.tx_container_parent} == \'0\'', then: ' wrapper ]{f:if(condition:\'{data.layout} == 1\', then: \' [ center\')}')} ]">
 

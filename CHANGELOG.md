@@ -1,6 +1,13 @@
 # Changelog
 
-## Breaking Changes in v2.0.0
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [2.0.0]
 
 ### TYPO3 v11 compatibility
 The extension is only compatible with TYPO3 v11.
@@ -9,39 +16,18 @@ This lead to the following improvements:
 * no `ext_emconf.php` any longer
 * improved Icon Registration in `Configuration/Icons.php` instead of `ext_localconf.php`
 
+### Changed
 
-### Remove tailwindCSS styling
-Affected are the following files in the directory `Resources/Private`:
+### Miscellaneous changes
 
-* `Resources/Private/Layouts/Default.html`
-* `Resources/Private/Partials/Header/All.html`
-* `Resources/Private/Partials/Header/HeaderLabel.html`
-* `Resources/Private/Partials/Bullets/Type-0.html`
-* `Resources/Private/Partials/Bullets/Type-1.html`
-* `Resources/Private/Templates/*`
+* rename `Resources/Public/Icons/extension.svg` to `Resources/Public/Icons/Extension.svg` (uppercase) → to make it work
+* remove `ext_tables.php` → was not used
+* improve `README.md`
+* remove `Configuration/TCA/Overrides/102_sys_template.php` → it added only static TypoScript file which is not necessary because you should import the TypoScript in your SitePackage.
+* Use XLIFF files for labels and description of new content elements instead of inline text.
+* Show type of content element directly in `Resources/Private/Layouts/Default.html`.
 
-### Remove content element `header`
-
-The content element `header` got an additional field `image`.
-
-To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
-Therefore this functionality was removed. You have to transfer this functionality to your own extension / sitePackage.
-
-The removed files are:
-* `Configuration/TCA/Overrides/202_content_element_header.php`
-* `Configuration/TsConfig/ContentElement/Element/120_Header.tsconfig`
-* `Configuration/TypoScript/ContentElement/Header.typoscript`
-
-### Remove content element `textpic`
-The template of the content element `textpic` was adapted.
-
-To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
-You have to transfer this functionality to your own extension / sitePackage.
-
-The removed files is:
-`/Resources/Private/Templates/Textpic.html`
-
-### Use proper functionality to hide header content elements `pageHero` and `accordionContainer`
+#### Use proper functionality to hide header content elements `pageHero` and `accordionContainer`
 
 The behaviour that header sections are automatically not rendered
 in the content elements `pageHero` and `accordionContainer` is not given any longer.
@@ -59,7 +45,40 @@ Therefore both content elements now need in their templates something like
 
 To render the header label we now use also a `DropIn` which is also described in the feature chancelog.
 
-### TCEFORM
+### Removed
+
+#### tailwindCSS styling
+Affected are the following files in the directory `Resources/Private`:
+
+* `Resources/Private/Layouts/Default.html`
+* `Resources/Private/Partials/Header/All.html`
+* `Resources/Private/Partials/Header/HeaderLabel.html`
+* `Resources/Private/Partials/Bullets/Type-0.html`
+* `Resources/Private/Partials/Bullets/Type-1.html`
+* `Resources/Private/Templates/*`
+
+#### Content element `header`
+
+The content element `header` got an additional field `image`.
+
+To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
+Therefore this functionality was removed. You have to transfer this functionality to your own extension / sitePackage.
+
+The removed files are:
+* `Configuration/TCA/Overrides/202_content_element_header.php`
+* `Configuration/TsConfig/ContentElement/Element/120_Header.tsconfig`
+* `Configuration/TypoScript/ContentElement/Header.typoscript`
+
+#### Content element `textpic`
+The template of the content element `textpic` was adapted.
+
+To add that function in this extension was not considering the real target of `t3_ce`: To add new content elements.
+You have to transfer this functionality to your own extension / sitePackage.
+
+The removed files is:
+`/Resources/Private/Templates/Textpic.html`
+
+#### TCEFORM
 Following settings are not given any longer and might need to be set by yourself:
 
 ```tsconfig
@@ -133,10 +152,4 @@ TCEFORM {
 ```
 
 
-### Miscellaneous changes
 
-* rename `Resources/Public/Icons/extension.svg` to `Resources/Public/Icons/Extension.svg` (uppercase) → to make it work
-* remove `ext_tables.php` → was not used
-* improve `README.md`
-* remove `Configuration/TCA/Overrides/102_sys_template.php` → it added only static TypoScript file which is not necessary because you should import the TypoScript in your SitePackage.
-* Use XLIFF files for labels and description of new content elements instead of inline text.

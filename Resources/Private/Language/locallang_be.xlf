@@ -49,6 +49,13 @@
 				<source>Container for 4 columns</source>
 			</trans-unit>
 
+			<trans-unit id="content_element.grid_container">
+				<source>Grid Container</source>
+			</trans-unit>
+			<trans-unit id="content_element.grid_container.description">
+				<source>Container, displaying childs in a grid.</source>
+			</trans-unit>
+
 			<trans-unit id="content_element.x_col_container.separator">
 				<source>Separator</source>
 			</trans-unit>

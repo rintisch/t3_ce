@@ -1,0 +1,15 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+mod.wizards.newContentElement.wizardItems.interactive {
+  elements {
+    grid {
+      title = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.grid_container
+      description = LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.grid_container.description
+      tt_content_defValues.CType = t3ce-grid-container
+      iconIdentifier = content-t3ce-grid-container
+    }
+  }
+
+  show := addToList(grid)
+}

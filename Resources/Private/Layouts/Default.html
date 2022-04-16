@@ -14,7 +14,7 @@
             </f:comment>
             <f:variable name="paddingTop">
                 <f:if condition="{data.space_before_class} == '' && {data.CType} != 'page_hero'">
-                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pad-top-400' , else: '')}</f:then>
+                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pad-top-600' , else: '')}</f:then>
                     <f:else>pad-top-{data.space_before_class}</f:else>
                 </f:if>
             </f:variable>
@@ -26,7 +26,7 @@
             </f:comment>
             <f:variable name="paddingBottom">
                 <f:if condition="{data.space_after_class} == '' && {data.CType} !== 'page_hero'">
-                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pad-bottom-400' , else: '')}</f:then>
+                    <f:then>{f:if(condition:'{data.tx_container_parent} == 0', then: 'pad-bottom-600' , else: '')}</f:then>
                     <f:else>pad-bottom-{data.space_after_class}</f:else>
                 </f:if>
             </f:variable>
@@ -38,9 +38,17 @@
                 </f:if>
             </f:variable>
 
+            <f:comment><!-- CENTER CONTENT --></f:comment>
+            <f:variable name="isCentered">
+                <f:if condition="{data.layout} == 10">
+                    <f:then>1</f:then>
+                    <f:else>0</f:else>
+                </f:if>
+            </f:variable>
+
             <div id="c{data.uid}" class="[ ce-{data.CType}{f:if(condition:'{data.layout}', then:' layout-{data.layout}')} ] {t3ce:format.makeSingleline(value: '{paddingBottom}{paddingTop}{backgroundColor}')}">
                 <f:comment><!-- use wrapper only in 1st-level CE, not in nested CE. --></f:comment>
-                <div class="[ stack {f:if(condition: '{data.tx_container_parent} == \'0\'', then: ' wrapper ]{f:if(condition:\'{data.layout} == 1\', then: \' [ center\')}')} ]">
+                <div class="[ stack {f:if(condition: '{data.tx_container_parent} == \'0\'', then: ' wrapper ]{f:if(condition:\'{isCentered} == 1\', then: \' [ center\')}')} ]">
 
                     <f:if condition="{data._LOCALIZED_UID}">
                         <a id="c{data._LOCALIZED_UID}"></a>

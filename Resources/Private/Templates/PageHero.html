@@ -10,22 +10,20 @@
 </f:section>
 
 <f:section name="Main">
-    <section class="[ hero ] [ bg-secondary-glare ]">
+    <section class="[ hero ]">
         <div class="[ content ]">
-            <div class="[ pad-top-600 md:pad-bottom-600 ]">
-                <div class="[ stack ]">
-                    <f:if condition="{data.header}">
-                        <h1 class="">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
-                    </f:if>
+            <div class="[ stack ]">
+                <f:if condition="{data.header}">
+                    <h1 class="">{data.header -> t3ce:format.removeParagraph() -> f:format.htmlentitiesDecode()}</h1>
+                </f:if>
 
-                    <f:if condition="{data.subheader}">
-                        <p class="">{data.subheader}</p>
-                    </f:if>
+                <f:if condition="{data.subheader}">
+                    <p class="">{data.subheader}</p>
+                </f:if>
 
-                    <f:if condition="{data.bodytext}">
-                        <f:format.html>{data.bodytext}</f:format.html>
-                    </f:if>
-                </div>
+                <f:if condition="{data.bodytext}">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </f:if>
             </div>
 
             <f:if condition="{images.0}">

@@ -42,8 +42,6 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['page_hero'])) {
         'page_hero',
         'content-t3ce-page-hero'
     ],
-    'accordion',
-    'before'
 );
 
 /***************

@@ -23,7 +23,6 @@ $iconRegistry->registerIcon(
 
 /* Add more icons for other content elementes */
 $icons = [
-    'accordion',
     'page-hero'
 ];
 foreach ($icons as $icon) {

@@ -1,7 +1,7 @@
 {
   "name": "rintisch/t3-ce",
   "type": "typo3-cms-extension",
-  "version": "1.1.0",
+  "version": "3.0.0",
   "description": "Often needed content elements which are not included in Fluid Styled Content.",
   "homepage": "https://github.com/rintisch",
   "license": [
@@ -11,10 +11,10 @@
     "TYPO3 CMS"
   ],
   "require": {
-    "typo3/cms-core": "^9.5 || ^10.4 || ^11.5",
-    "typo3/cms-rte-ckeditor": "^9.5 || ^10.4 || ^11.5",
-    "typo3/cms-fluid-styled-content": "^9.5 || ^10.4 || ^11.5",
-    "b13/container": "^1.4"
+    "typo3/cms-core": "^11.5",
+    "typo3/cms-rte-ckeditor": "^11.5",
+    "typo3/cms-fluid-styled-content": "^11.5",
+    "b13/container": "^2.1"
   },
   "autoload": {
     "psr-4": {

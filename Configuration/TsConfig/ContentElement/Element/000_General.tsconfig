@@ -71,10 +71,5 @@ TCEFORM {
         wide = Überbreit
       }
     }
-
-    # Remove unused fields from accordions
-    header_layout.types.t3ce-accordion-container.disabled = 1
-    header_link.types.t3ce-accordion-container.disabled = 1
-    subheader.types.t3ce-accordion-container.disabled = 1
   }
 }

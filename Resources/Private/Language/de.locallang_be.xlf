@@ -16,21 +16,6 @@
 				<target>Einstellungen</target>
 			</trans-unit>
 
-			<trans-unit id="content_element.accordion">
-				<source>Accordion</source>
-				<target>Akkordeon</target>
-			</trans-unit>
-
-			<trans-unit id="content_element.container_accordion">
-				<source>Accordion-Container</source>
-				<target>Akkordeon-Container</target>
-			</trans-unit>
-
-			<trans-unit id="content_element.accordion.description">
-				<source>A content element for fancy accordion magic</source>
-				<target>Ein ausklappbares Akkordeon</target>
-			</trans-unit>
-
 			<trans-unit id="content_element.page_hero">
 				<source>Page Hero</source>
 				<target>Page Hero</target>

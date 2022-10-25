@@ -39,16 +39,14 @@
 
             <f:comment><!-- BACKGROUND COLOR --></f:comment>
             <f:variable name="backgroundColor">
-                <f:if condition="{data.CType} != 't3ce-accordion-container'">
-                    <f:switch expression="{data.background_color_class}">
-                        <f:case value="none">
-                        </f:case>
-                        <f:case value="bg-primary-500">
-                            bg-primary-500 text-white tracking-wide
-                        </f:case>
-                        <f:defaultCase>{data.background_color_class}</f:defaultCase>
-                    </f:switch>
-                </f:if>
+                <f:switch expression="{data.background_color_class}">
+                    <f:case value="none">
+                    </f:case>
+                    <f:case value="bg-primary-500">
+                        bg-primary-500 text-white tracking-wide
+                    </f:case>
+                    <f:defaultCase>{data.background_color_class}</f:defaultCase>
+                </f:switch>
             </f:variable>
 
             <f:comment><!-- FLEXBOX GRID → OFFSET --></f:comment>
@@ -92,7 +90,7 @@
                             <f:if condition="{data._LOCALIZED_UID}">
                                 <a id="c{data._LOCALIZED_UID}"></a>
                             </f:if>
-                            <f:if condition="{data.CType} != 't3ce-accordion-container' && {data.CType} != 'page_hero' && !({data.CType} == 'header' && {data.latyout} != 10)">
+                            <f:if condition="{data.CType} != 'page_hero' && !({data.CType} == 'header' && {data.latyout} != 10)">
                                 <div {f:if(condition:'{data.header_layout} != 100 && {data.header}', then:' class="mb-4"')}>
                                     <f:render section="Before" optional="true">
                                         <f:render partial="DropIn/Before/All" arguments="{_all}"/>

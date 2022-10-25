@@ -14,20 +14,6 @@
 				<source>Settings</source>
 			</trans-unit>
 
-			<trans-unit id="content_element.accordion">
-				<source>Accordion</source>
-			</trans-unit>
-			<trans-unit id="content_element.accordion.description">
-				<source>A content element for fancy accordion magic</source>
-			</trans-unit>
-
-			<trans-unit id="content_element.container_accordion">
-				<source>Accordion-Container</source>
-			</trans-unit>
-			<trans-unit id="content_element.container_accordion.description">
-				<source>Container to create an accordion</source>
-			</trans-unit>
-
 			<trans-unit id="content_element.2_col_container">
 				<source>2 Column Container</source>
 			</trans-unit>

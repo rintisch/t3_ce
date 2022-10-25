@@ -1,5 +1,11 @@
 # Changelog
 
+## Breaking Changes in v3.1.0
+
+### Fix messed up rebase
+Finally remove
+
+
 ## Breaking Changes in v3.0.0
 
 ### Drop container content elements

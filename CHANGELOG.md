@@ -1,17 +1,34 @@
 # Changelog
+All notable changes to this project will be documented in this file.
 
-## Breaking Changes in v3.1.0
+The format is ... more and more ... based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### Fix messed up rebase
-Finally remove
+## [Unreleased]
 
+## [4.0.0]
 
-## Breaking Changes in v3.0.0
+### Added
+* `Classes/Backend/Preview/SpaceAndColorPreviewRenderer.php` to replace removed `BackendContentHook`
 
-### Drop container content elements
-All container content elements are deleted because
-the concept was simply bad. It is better to use IRRE
-for container with e.g. EXT:listelements.
+### Changed
+* Add simple `.gitignore`.
+* Adapt format of this `CHANGELOG.md` to format of *Keep a changelog*.
+* The new PreviewRenderer is not registered but a hint how it needs to be done is given in `103_tt_content.php`.
+
+### Removed
+`Classes/Hooks/BackendContentHook.php` which used deprecated functionality.
+
+## [3.1.0]
+
+### Removed
+
+#### Fix messed up rebase
+Finally remove TailwindCSS related code.
+
+## [3.0.0]
+
+### Changed
 
 ### Drop support for older TYPO3 versions
 Only TYPO3 v11 is supported any longer.
@@ -19,18 +36,24 @@ Only TYPO3 v11 is supported any longer.
 ### Update dependency to EXT:container
 Use latest version of EXT:container.
 
-## Breaking Changes in v2.0.0
+### Removed
 
-### TYPO3 v11 compatibility
+#### Drop container content elements
+All container content elements are deleted because
+the concept was simply bad. It is better to use IRRE
+for container with e.g. EXT:listelements.
+
+## [2.0.0]
+
+### Changed
+#### TYPO3 v11 compatibility
 The extension is only compatible with TYPO3 v11.
 
 This lead to the following improvements:
 * no `ext_emconf.php` any longer
 * improved Icon Registration in `Configuration/Icons.php` instead of `ext_localconf.php`
 
-### Changed
-
-### Miscellaneous changes
+#### Miscellaneous changes
 
 * rename `Resources/Public/Icons/extension.svg` to `Resources/Public/Icons/Extension.svg` (uppercase) → to make it work
 * remove `ext_tables.php` → was not used

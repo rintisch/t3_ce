@@ -62,3 +62,15 @@ $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] = '
     '',
     'before:header'
 );
+
+/**
+ * Adapted PreviewRenderer for footer of content elements.
+ * Add the following out commented lines to your TCA config
+ * if you want to use the PreviewRenderer.
+ * Alternatively you can extend the SpaceAndColorPreviewRenderer
+ * in the same way as it extends the StandardContentPreviewRenderer.
+ */
+//$GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer']
+//    = \Rintisch\T3Ce\Backend\Preview\SpaceAndColorPreviewRenderer::class;
+//$GLOBALS['TCA']['tt_content']['types']['textmedia']['previewRenderer']
+//    = \Rintisch\T3Ce\Backend\Preview\SpaceAndColorPreviewRenderer::class;

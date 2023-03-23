@@ -1,5 +1,6 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /*
  * This file was part of the package bk2k/bootstrap-package and is adapted here
  *
@@ -7,7 +8,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 $ll = 'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:';
 
@@ -44,7 +45,7 @@ $temporaryColumns = [
     ]
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $temporaryColumns);
+ExtensionManagementUtility::addTCAcolumns('tt_content', $temporaryColumns);
 
 /***************
  * Add fields to default palettes
@@ -56,7 +57,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] = '
 ';
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     'header_label',
     '',

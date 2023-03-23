@@ -1,5 +1,6 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /**
  * This file was part of the package bk2k/bootstrap-package and is adapted here.
  *
@@ -7,7 +8,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 /**
  * Temporary variables
@@ -17,7 +18,7 @@ $extensionKey = 't3_ce';
 /***************
  * Add content element PageTSConfig
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+ExtensionManagementUtility::registerPageTSConfigFile(
     $extensionKey,
     'Configuration/TsConfig/ContentElement/Element/PageHero.tsconfig',
     'Content Element: Page Hero Element'
@@ -26,7 +27,7 @@ $extensionKey = 't3_ce';
 /***************
  * Add content element to selector list
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [

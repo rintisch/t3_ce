@@ -1,9 +1,12 @@
 <?php
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use B13\Container\Tca\Registry;
+use B13\Container\Tca\ContainerConfiguration;
 ## Add grid (= 1 col container)
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
-    new \B13\Container\Tca\ContainerConfiguration(
+    new ContainerConfiguration(
         't3ce-grid-container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.grid_container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.grid_container.description',

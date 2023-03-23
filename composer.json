@@ -25,5 +25,14 @@
     "typo3/cms": {
       "extension-key": "t3_ce"
     }
+  },
+  "require-dev": {
+    "ssch/typo3-rector": "^1.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
   }
 }

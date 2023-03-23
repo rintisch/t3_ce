@@ -1,9 +1,12 @@
 <?php
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use B13\Container\Tca\Registry;
+use B13\Container\Tca\ContainerConfiguration;
 ## Add 2 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
-    new \B13\Container\Tca\ContainerConfiguration(
+    new ContainerConfiguration(
         't3ce-2cols-container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.2_col_container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.2_col_container.description',
@@ -37,9 +40,9 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-2cols-container']['showitem'] = '
 
 ## Add 3 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
-    new \B13\Container\Tca\ContainerConfiguration(
+    new ContainerConfiguration(
         't3ce-3cols-container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.3_col_container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.3_col_container.description',
@@ -73,9 +76,9 @@ $GLOBALS['TCA']['tt_content']['types']['t3ce-3cols-container']['showitem'] = '
 
 ## Add 4 col container
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
-    new \B13\Container\Tca\ContainerConfiguration(
+    new ContainerConfiguration(
         't3ce-4cols-container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.4_col_container',
         'LLL:EXT:t3_ce/Resources/Private/Language/locallang_be.xlf:content_element.4_col_container.description',

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.1]
+### Added
+* Add `Services.yaml` which is mandatory in TYPO3 v12 to use ViewHelpers.
+
 ## [4.1.0]
 
 ### Added
